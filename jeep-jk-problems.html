@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jeep JK Problems – 2007–2018 Wrangler</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;600;700&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root { --olive:#4a5240;--olive-dark:#2e3328;--olive-light:#6b7560;--sand:#c8b89a;--sand-light:#e8ddd0;--rust:#b5451b;--rust-light:#d4602e;--cream:#f5f0e8;--dark:#1a1c18;--severity-high:#c0392b;--severity-med:#e67e22;--severity-low:#7f8c4f; }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Barlow',sans-serif;background:var(--dark);color:var(--cream)}
+    nav{position:sticky;top:0;z-index:100;background:rgba(26,28,24,0.95);backdrop-filter:blur(8px);border-bottom:1px solid rgba(200,184,154,0.1);padding:1rem 2rem;display:flex;align-items:center;gap:1rem}
+    nav a{text-decoration:none;color:var(--sand);font-size:.85rem;font-weight:600;letter-spacing:.05em}
+    nav a:first-child{color:var(--rust-light)} nav .sep{color:var(--olive-light)}
+    .nav-gen{margin-left:auto;font-family:'Black Ops One',cursive;font-size:1.5rem;color:rgba(200,184,154,0.2)}
+    .page-header{background:linear-gradient(135deg,#28221a 0%,var(--dark) 60%);border-bottom:1px solid rgba(200,184,154,0.1);padding:4rem 2rem 3rem;position:relative;overflow:hidden}
+    .page-header::after{content:'JK';font-family:'Black Ops One',cursive;font-size:18rem;color:rgba(255,255,255,0.03);position:absolute;right:-2rem;bottom:-3rem;line-height:1;pointer-events:none}
+    .header-inner{max-width:900px;margin:0 auto}
+    .gen-pill{display:inline-flex;align-items:center;gap:.5rem;background:rgba(181,69,27,0.2);border:1px solid rgba(181,69,27,0.4);padding:.3rem .8rem;border-radius:2px;font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--rust-light);margin-bottom:1rem}
+    .page-title{font-family:'Black Ops One',cursive;font-size:clamp(2.5rem,6vw,5rem);line-height:1;margin-bottom:.5rem}
+    .page-years{font-family:'Barlow Condensed',sans-serif;font-size:1.2rem;font-weight:600;color:var(--sand);letter-spacing:.1em;margin-bottom:1rem}
+    .page-intro{color:var(--sand);max-width:600px;line-height:1.7;font-size:1rem}
+    .stats-bar{background:rgba(74,82,64,0.2);border-bottom:1px solid rgba(200,184,154,0.08);padding:1rem 2rem}
+    .stats-inner{max-width:900px;margin:0 auto;display:flex;gap:2rem;flex-wrap:wrap}
+    .stat{display:flex;flex-direction:column;gap:.1rem}
+    .stat-val{font-family:'Black Ops One',cursive;font-size:1.4rem;color:var(--rust-light)}
+    .stat-label{font-size:.7rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--olive-light)}
+    .problems-section{max-width:900px;margin:0 auto;padding:3rem 2rem}
+    .problems-title{font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--sand);margin-bottom:2rem}
+    .problem-card{background:rgba(255,255,255,0.03);border:1px solid rgba(200,184,154,0.1);border-left:4px solid var(--severity-high);border-radius:0 4px 4px 0;padding:1.75rem;margin-bottom:1.25rem;transition:background .2s}
+    .problem-card:hover{background:rgba(255,255,255,0.05)} .problem-card.medium{border-left-color:var(--severity-med)} .problem-card.low{border-left-color:var(--severity-low)}
+    .problem-header{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:.75rem;flex-wrap:wrap}
+    .problem-name{font-family:'Black Ops One',cursive;font-size:1.3rem;color:var(--cream)}
+    .severity-badge{font-family:'Barlow Condensed',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.2rem .6rem;border-radius:2px;flex-shrink:0}
+    .severity-badge.high{background:rgba(192,57,43,0.2);color:#e74c3c;border:1px solid rgba(192,57,43,0.4)}
+    .severity-badge.medium{background:rgba(230,126,34,0.2);color:#e67e22;border:1px solid rgba(230,126,34,0.4)}
+    .severity-badge.low{background:rgba(127,140,79,0.2);color:#a8c56e;border:1px solid rgba(127,140,79,0.4)}
+    .problem-desc{color:var(--sand);line-height:1.7;font-size:.95rem;margin-bottom:1rem}
+    .problem-meta{display:flex;gap:2rem;flex-wrap:wrap}
+    .meta-item{display:flex;flex-direction:column;gap:.15rem}
+    .meta-label{font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--olive-light)}
+    .meta-val{font-size:.875rem;font-weight:600;color:var(--sand-light)}
+    .fix-box{margin-top:1rem;padding:.875rem 1rem 1rem;background:rgba(74,82,64,0.2);border-left:2px solid var(--olive);border-radius:0 2px 2px 0}
+    .fix-label{font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--olive-light);margin-bottom:.25rem}
+    .fix-text{font-size:.875rem;color:var(--sand);line-height:1.6;margin-bottom:.875rem}
+    .fix-buttons{display:flex;gap:.6rem;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:.4rem;padding:.45rem .9rem;border-radius:3px;font-family:'Barlow Condensed',sans-serif;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:opacity .2s,transform .15s}
+    .btn:hover{opacity:.85;transform:translateY(-1px)} .btn-yt{background:#ff0000;color:#fff} .btn-amz{background:#ff9900;color:#111}
+    .btn svg{width:14px;height:14px;fill:currentColor;flex-shrink:0}
+    .back-bar{max-width:900px;margin:0 auto;padding:0 2rem 3rem}
+    .back-link{display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-size:.85rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--rust-light);transition:gap .2s}
+    .back-link:hover{gap:.75rem}
+    footer{border-top:1px solid rgba(200,184,154,0.08);padding:2rem;text-align:center;font-size:.8rem;color:var(--olive-light)}
+  
+    /* CAMO BACKGROUND */
+    body { background-color: #7a5c38; background-image: repeating-conic-gradient(at 0% 0%,#5a3f22 0deg 90deg,transparent 90deg 180deg),repeating-conic-gradient(at 100% 100%,#c4a97d44 0deg 90deg,transparent 90deg 180deg); background-size: 64px 64px, 32px 32px; }
+    body::before { content: ''; position: fixed; inset: 0; z-index: 0; pointer-events: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='128'%3E%3Crect width='128' height='128' fill='%237a5c38'/%3E%3Crect x='0' y='0' width='32' height='16' fill='%235a3f22'/%3E%3Crect x='32' y='0' width='16' height='32' fill='%23c4a97d'/%3E%3Crect x='48' y='0' width='32' height='16' fill='%235a3f22'/%3E%3Crect x='96' y='0' width='32' height='16' fill='%23c4a97d'/%3E%3Crect x='0' y='16' width='16' height='16' fill='%23c4a97d'/%3E%3Crect x='16' y='16' width='32' height='16' fill='%237a5c38'/%3E%3Crect x='64' y='16' width='16' height='16' fill='%235a3f22'/%3E%3Crect x='80' y='16' width='32' height='16' fill='%237a5c38'/%3E%3Crect x='112' y='16' width='16' height='32' fill='%235a3f22'/%3E%3Crect x='0' y='32' width='48' height='16' fill='%237a5c38'/%3E%3Crect x='48' y='32' width='16' height='16' fill='%23c4a97d'/%3E%3Crect x='64' y='32' width='32' height='16' fill='%235a3f22'/%3E%3Crect x='96' y='32' width='16' height='16' fill='%237a5c38'/%3E%3Crect x='0' y='48' width='16' height='32' fill='%235a3f22'/%3E%3Crect x='16' y='48' width='32' height='16' fill='%23c4a97d'/%3E%3Crect x='48' y='48' width='32' height='32' fill='%237a5c38'/%3E%3Crect x='80' y='48' width='16' height='16' fill='%23c4a97d'/%3E%3Crect x='96' y='48' width='32' height='16' fill='%235a3f22'/%3E%3Crect x='16' y='64' width='16' height='16' fill='%235a3f22'/%3E%3Crect x='32' y='64' width='16' height='32' fill='%235a3f22'/%3E%3Crect x='80' y='64' width='32' height='16' fill='%237a5c38'/%3E%3Crect x='112' y='64' width='16' height='16' fill='%23c4a97d'/%3E%3Crect x='0' y='80' width='32' height='16' fill='%23c4a97d'/%3E%3Crect x='48' y='80' width='16' height='16' fill='%23c4a97d'/%3E%3Crect x='64' y='80' width='16' height='32' fill='%235a3f22'/%3E%3Crect x='80' y='80' width='16' height='16' fill='%235a3f22'/%3E%3Crect x='96' y='80' width='32' height='32' fill='%23c4a97d'/%3E%3Crect x='0' y='96' width='16' height='32' fill='%237a5c38'/%3E%3Crect x='16' y='96' width='16' height='32' fill='%235a3f22'/%3E%3Crect x='32' y='96' width='32' height='16' fill='%237a5c38'/%3E%3Crect x='80' y='96' width='16' height='32' fill='%237a5c38'/%3E%3Crect x='32' y='112' width='16' height='16' fill='%23c4a97d'/%3E%3Crect x='48' y='112' width='16' height='16' fill='%235a3f22'/%3E%3Crect x='64' y='112' width='16' height='16' fill='%237a5c38'/%3E%3C/svg%3E"); background-size: 128px 128px; opacity: 0.55; }
+    body::after { content: ''; position: fixed; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(180deg,rgba(26,16,8,0.85) 0%,rgba(26,16,8,0.75) 40%,rgba(26,16,8,0.85) 100%); }
+    nav, header, section, .stats-bar, .problems-section, .back-bar, footer, .disclaimer-bar { position: relative; z-index: 2; }
+
+    nav a { text-decoration: none; font-family: 'Oswald', sans-serif; font-size: .75rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #f0d9a8; padding: 0 .9rem; height: 60px; display: inline-flex; align-items: center; border-bottom: 3px solid transparent; transition: color .2s, border-color .2s; }
+    nav a:hover, nav a.active { color: #e8c98d; border-bottom-color: #e8662a; }
+
+  </style>
+</head>
+<body>
+<div class="disclaimer-bar" style="position:relative;z-index:2;background:rgba(139,58,26,0.9);border-bottom:1px solid rgba(232,102,42,0.5);padding:.6rem 2rem;text-align:center;font-family:'Oswald',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,0.9)">
+  ⚠️ &nbsp; For Educational &amp; Informational Purposes Only &nbsp;·&nbsp; Always consult a qualified mechanic before performing repairs
+</div>
+<nav style="position:sticky;top:0;z-index:100;background:rgba(26,16,8,0.95);backdrop-filter:blur(10px);border-bottom:2px solid #81613c;padding:0 1.5rem;display:flex;align-items:center;height:60px;gap:0">
+  <a href="index.html" style="font-family:'Bebas Neue',cursive;font-size:1.5rem;letter-spacing:.08em;color:#e8c98d;text-decoration:none;margin-right:auto;display:flex;align-items:center;gap:.5rem">
+    <span style="width:28px;height:28px;background:#81613c;clip-path:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);display:inline-flex;align-items:center;justify-content:center;font-size:.8rem">🔧</span>
+    Doc's Garage
+  </a>
+  <div style="display:flex;flex-wrap:wrap">
+    <a href="index.html">Home</a><a href="jeep-tj-problems.html">TJ Guide</a><a href="jeep-jk-problems.html" class="active">JK Guide</a><a href="jeep-jl-problems.html">JL Guide</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+  </div>
+</nav>
+<header class="page-header">
+  <div class="header-inner">
+    <div class="gen-pill">Generation JK</div>
+    <h1 class="page-title">Wrangler JK</h1>
+    <div class="page-years">2007 – 2018</div>
+    <p class="page-intro">The JK brought a four-door Unlimited body style, a new 3.8L V6 (later replaced by the 3.6L Pentastar), and vastly improved comfort — but also a fresh set of mechanical headaches. Here's what JK owners deal with most.</p>
+  </div>
+</header>
+<div class="stats-bar"><div class="stats-inner">
+  <div class="stat"><span class="stat-val">9</span><span class="stat-label">Known Issues</span></div>
+  <div class="stat"><span class="stat-val">4</span><span class="stat-label">High Severity</span></div>
+  <div class="stat"><span class="stat-val">3.8L / 3.6L</span><span class="stat-label">Engine Options</span></div>
+  <div class="stat"><span class="stat-val">2007–2018</span><span class="stat-label">Model Years</span></div>
+</div></div>
+<section class="problems-section">
+  <div class="problems-title">Common Problems &amp; Issues</div>
+
+  <div class="problem-card high">
+    <div class="problem-header"><span class="problem-name">Death Wobble</span><span class="severity-badge high">High Severity</span></div>
+    <p class="problem-desc">Like the TJ before it, the JK is plagued by death wobble — violent front-end shaking triggered by a road imperfection at highway speeds. Lifted JKs are especially susceptible. The factory track bar, ball joints, and steering stabilizer all contribute.</p>
+    <div class="problem-meta">
+      <div class="meta-item"><span class="meta-label">Frequency</span><span class="meta-val">Very Common</span></div>
+      <div class="meta-item"><span class="meta-label">Affected Years</span><span class="meta-val">All JK years</span></div>
+      <div class="meta-item"><span class="meta-label">Est. Repair Cost</span><span class="meta-val">$300 – $1,500</span></div>
+    </div>
+    <div class="fix-box">
+      <div class="fix-label">Recommended Fix</div>
+      <div class="fix-text">Start with the track bar and its frame mount. Inspect all steering components. A heavy-duty aftermarket track bar, fresh ball joints, and a dual steering stabilizer setup is a comprehensive fix for lifted rigs.</div>
+      <div class="fix-buttons">
+        <a class="btn btn-yt" href="https://www.youtube.com/results?search_query=Jeep+JK+death+wobble+fix" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>Watch Fix</a>
+        <a class="btn btn-amz" href="https://www.amazon.com/s?k=Jeep+JK+Wrangler+heavy+duty+track+bar&tag=jeeptj0b-20" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.699-3.182v.685zm3.186 7.705c-.209.189-.512.201-.745.076-1.052-.873-1.238-1.276-1.814-2.106-1.734 1.767-2.962 2.297-5.209 2.297-2.66 0-4.731-1.641-4.731-4.925 0-2.565 1.391-4.309 3.37-5.164 1.715-.754 4.11-.889 5.942-1.095v-.41c0-.753.06-1.642-.383-2.294-.385-.579-1.124-.82-1.776-.82-1.208 0-2.282.62-2.545 1.903-.054.285-.261.567-.548.582l-3.061-.33c-.259-.058-.546-.266-.472-.66C5.97 2.309 8.83 1.5 11.39 1.5c1.307 0 3.015.348 4.045 1.34 1.307 1.22 1.183 2.848 1.183 4.617v4.181c0 1.258.521 1.811 1.012 2.49.172.243.21.534-.01.714l-2.476 2.953h-.001zm3.637 1.664c-2.318 1.762-5.688 2.695-8.586 2.695-4.062 0-7.721-1.501-10.487-3.998-.217-.196-.023-.464.237-.311 2.987 1.738 6.682 2.78 10.497 2.78 2.573 0 5.398-.533 8.001-1.637.393-.167.722.257.338.471zm.962-1.093c-.297-.381-1.963-.181-2.713-.091-.228.028-.263-.171-.058-.315 1.329-.934 3.509-.664 3.762-.351.254.315-.066 2.494-1.315 3.537-.191.16-.375.075-.29-.136.281-.702.91-2.271.614-2.644z"/></svg>Shop on Amazon</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="problem-card high">
+    <div class="problem-header"><span class="problem-name">TIPM Failure</span><span class="severity-badge high">High Severity</span></div>
+    <p class="problem-desc">The TIPM is the JK's central electrical hub, and it's notorious for failing. Symptoms include a fuel pump that won't prime, random horn honking, windows or wipers operating on their own, and electrical gremlins across multiple systems.</p>
+    <div class="problem-meta">
+      <div class="meta-item"><span class="meta-label">Frequency</span><span class="meta-val">Very Common (2007–2014)</span></div>
+      <div class="meta-item"><span class="meta-label">Affected Years</span><span class="meta-val">Primarily 2007–2014</span></div>
+      <div class="meta-item"><span class="meta-label">Est. Repair Cost</span><span class="meta-val">$600 – $1,200</span></div>
+    </div>
+    <div class="fix-box">
+      <div class="fix-label">Recommended Fix</div>
+      <div class="fix-text">Confirm diagnosis with a scan tool. Rebuild services offer refurbished TIPMs for around $250–$400 vs. a new dealer unit. Chrysler extended the warranty on many TIPM units — check if yours qualifies.</div>
+      <div class="fix-buttons">
+        <a class="btn btn-yt" href="https://www.youtube.com/results?search_query=Jeep+JK+TIPM+failure+fix+replacement" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>Watch Fix</a>
+        <a class="btn btn-amz" href="https://www.amazon.com/s?k=Jeep+JK+Wrangler+TIPM+replacement&tag=jeeptj0b-20" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.699-3.182v.685zm3.186 7.705c-.209.189-.512.201-.745.076-1.052-.873-1.238-1.276-1.814-2.106-1.734 1.767-2.962 2.297-5.209 2.297-2.66 0-4.731-1.641-4.731-4.925 0-2.565 1.391-4.309 3.37-5.164 1.715-.754 4.11-.889 5.942-1.095v-.41c0-.753.06-1.642-.383-2.294-.385-.579-1.124-.82-1.776-.82-1.208 0-2.282.62-2.545 1.903-.054.285-.261.567-.548.582l-3.061-.33c-.259-.058-.546-.266-.472-.66C5.97 2.309 8.83 1.5 11.39 1.5c1.307 0 3.015.348 4.045 1.34 1.307 1.22 1.183 2.848 1.183 4.617v4.181c0 1.258.521 1.811 1.012 2.49.172.243.21.534-.01.714l-2.476 2.953h-.001zm3.637 1.664c-2.318 1.762-5.688 2.695-8.586 2.695-4.062 0-7.721-1.501-10.487-3.998-.217-.196-.023-.464.237-.311 2.987 1.738 6.682 2.78 10.497 2.78 2.573 0 5.398-.533 8.001-1.637.393-.167.722.257.338.471zm.962-1.093c-.297-.381-1.963-.181-2.713-.091-.228.028-.263-.171-.058-.315 1.329-.934 3.509-.664 3.762-.351.254.315-.066 2.494-1.315 3.537-.191.16-.375.075-.29-.136.281-.702.91-2.271.614-2.644z"/></svg>Shop on Amazon</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="problem-card high">
+    <div class="problem-header"><span class="problem-name">Front Differential Pinion Seal Leak</span><span class="severity-badge high">High Severity</span></div>
+    <p class="problem-desc">The front differential pinion seal on Dana 30 and Dana 44 front axles is a well-documented JK leak point. Gear oil escapes past the seal and can drip onto the brake caliper — a potential safety issue if left unattended long enough.</p>
+    <div class="problem-meta">
+      <div class="meta-item"><span class="meta-label">Frequency</span><span class="meta-val">Common</span></div>
+      <div class="meta-item"><span class="meta-label">Est. Repair Cost</span><span class="meta-val">$150 – $400</span></div>
+    </div>
+    <div class="fix-box">
+      <div class="fix-label">Recommended Fix</div>
+      <div class="fix-text">Replace the pinion seal and check the differential fluid level and condition. Inspect the brake caliper and rotor for gear oil contamination — replace if soaked. Use a quality seal from National or Timken.</div>
+      <div class="fix-buttons">
+        <a class="btn btn-yt" href="https://www.youtube.com/results?search_query=Jeep+JK+front+differential+pinion+seal+replacement" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>Watch Fix</a>
+        <a class="btn btn-amz" href="https://www.amazon.com/s?k=Jeep+JK+Wrangler+Dana+44+pinion+seal&tag=jeeptj0b-20" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.699-3.182v.685zm3.186 7.705c-.209.189-.512.201-.745.076-1.052-.873-1.238-1.276-1.814-2.106-1.734 1.767-2.962 2.297-5.209 2.297-2.66 0-4.731-1.641-4.731-4.925 0-2.565 1.391-4.309 3.37-5.164 1.715-.754 4.11-.889 5.942-1.095v-.41c0-.753.06-1.642-.383-2.294-.385-.579-1.124-.82-1.776-.82-1.208 0-2.282.62-2.545 1.903-.054.285-.261.567-.548.582l-3.061-.33c-.259-.058-.546-.266-.472-.66C5.97 2.309 8.83 1.5 11.39 1.5c1.307 0 3.015.348 4.045 1.34 1.307 1.22 1.183 2.848 1.183 4.617v4.181c0 1.258.521 1.811 1.012 2.49.172.243.21.534-.01.714l-2.476 2.953h-.001zm3.637 1.664c-2.318 1.762-5.688 2.695-8.586 2.695-4.062 0-7.721-1.501-10.487-3.998-.217-.196-.023-.464.237-.311 2.987 1.738 6.682 2.78 10.497 2.78 2.573 0 5.398-.533 8.001-1.637.393-.167.722.257.338.471zm.962-1.093c-.297-.381-1.963-.181-2.713-.091-.228.028-.263-.171-.058-.315 1.329-.934 3.509-.664 3.762-.351.254.315-.066 2.494-1.315 3.537-.191.16-.375.075-.29-.136.281-.702.91-2.271.614-2.644z"/></svg>Shop on Amazon</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="problem-card high">
+    <div class="problem-header"><span class="problem-name">3.8L V6 Oil Consumption &amp; Overheating</span><span class="severity-badge high">High Severity</span></div>
+    <p class="problem-desc">The 3.8L V6 found in 2007–2011 JKs burns oil, runs hot in stop-and-go traffic, and has a reputation for head gasket failures on neglected examples. The 2012+ Pentastar 3.6L is significantly more reliable.</p>
+    <div class="problem-meta">
+      <div class="meta-item"><span class="meta-label">Frequency</span><span class="meta-val">Very Common</span></div>
+      <div class="meta-item"><span class="meta-label">Affected Years</span><span class="meta-val">2007–2011</span></div>
+      <div class="meta-item"><span class="meta-label">Est. Repair Cost</span><span class="meta-val">$500 – $3,000</span></div>
+    </div>
+    <div class="fix-box">
+      <div class="fix-label">Recommended Fix</div>
+      <div class="fix-text">Check oil level every fill-up. Install an aftermarket temperature gauge to monitor closely. Upgrade the radiator and consider an oil catch can. Many owners swap to a 3.6L Pentastar on high-mileage 3.8s.</div>
+      <div class="fix-buttons">
+        <a class="btn btn-yt" href="https://www.youtube.com/results?search_query=Jeep+JK+3.8+oil+consumption+overheating+fix" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>Watch Fix</a>
+        <a class="btn btn-amz" href="https://www.amazon.com/s?k=Jeep+JK+3.8+oil+catch+can+radiator+upgrade&tag=jeeptj0b-20" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.699-3.182v.685zm3.186 7.705c-.209.189-.512.201-.745.076-1.052-.873-1.238-1.276-1.814-2.106-1.734 1.767-2.962 2.297-5.209 2.297-2.66 0-4.731-1.641-4.731-4.925 0-2.565 1.391-4.309 3.37-5.164 1.715-.754 4.11-.889 5.942-1.095v-.41c0-.753.06-1.642-.383-2.294-.385-.579-1.124-.82-1.776-.82-1.208 0-2.282.62-2.545 1.903-.054.285-.261.567-.548.582l-3.061-.33c-.259-.058-.546-.266-.472-.66C5.97 2.309 8.83 1.5 11.39 1.5c1.307 0 3.015.348 4.045 1.34 1.307 1.22 1.183 2.848 1.183 4.617v4.181c0 1.258.521 1.811 1.012 2.49.172.243.21.534-.01.714l-2.476 2.953h-.001zm3.637 1.664c-2.318 1.762-5.688 2.695-8.586 2.695-4.062 0-7.721-1.501-10.487-3.998-.217-.196-.023-.464.237-.311 2.987 1.738 6.682 2.78 10.497 2.78 2.573 0 5.398-.533 8.001-1.637.393-.167.722.257.338.471zm.962-1.093c-.297-.381-1.963-.181-2.713-.091-.228.028-.263-.171-.058-.315 1.329-.934 3.509-.664 3.762-.351.254.315-.066 2.494-1.315 3.537-.191.16-.375.075-.29-.136.281-.702.91-2.271.614-2.644z"/></svg>Shop on Amazon</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="problem-card medium">
+    <div class="problem-header"><span class="problem-name">Evap Canister &amp; Fuel System Codes</span><span class="severity-badge medium">Medium Severity</span></div>
+    <p class="problem-desc">JKs commonly throw P0455 and P0456 evaporative emission codes. The gas cap, purge valve, and vent valve are common culprits. These will trigger a check engine light and can cause inspection failures.</p>
+    <div class="problem-meta">
+      <div class="meta-item"><span class="meta-label">Frequency</span><span class="meta-val">Common</span></div>
+      <div class="meta-item"><span class="meta-label">Est. Repair Cost</span><span class="meta-val">$20 – $400</span></div>
+    </div>
+    <div class="fix-box">
+      <div class="fix-label">Recommended Fix</div>
+      <div class="fix-text">Start with a new OEM-style locking gas cap. If the code persists, check the purge solenoid and vapor canister vent valve.</div>
+      <div class="fix-buttons">
+        <a class="btn btn-yt" href="https://www.youtube.com/results?search_query=Jeep+JK+P0455+P0456+evap+code+fix" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>Watch Fix</a>
+        <a class="btn btn-amz" href="https://www.amazon.com/s?k=Jeep+JK+Wrangler+gas+cap+locking+OEM&tag=jeeptj0b-20" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.699-3.182v.685zm3.186 7.705c-.209.189-.512.201-.745.076-1.052-.873-1.238-1.276-1.814-2.106-1.734 1.767-2.962 2.297-5.209 2.297-2.66 0-4.731-1.641-4.731-4.925 0-2.565 1.391-4.309 3.37-5.164 1.715-.754 4.11-.889 5.942-1.095v-.41c0-.753.06-1.642-.383-2.294-.385-.579-1.124-.82-1.776-.82-1.208 0-2.282.62-2.545 1.903-.054.285-.261.567-.548.582l-3.061-.33c-.259-.058-.546-.266-.472-.66C5.97 2.309 8.83 1.5 11.39 1.5c1.307 0 3.015.348 4.045 1.34 1.307 1.22 1.183 2.848 1.183 4.617v4.181c0 1.258.521 1.811 1.012 2.49.172.243.21.534-.01.714l-2.476 2.953h-.001zm3.637 1.664c-2.318 1.762-5.688 2.695-8.586 2.695-4.062 0-7.721-1.501-10.487-3.998-.217-.196-.023-.464.237-.311 2.987 1.738 6.682 2.78 10.497 2.78 2.573 0 5.398-.533 8.001-1.637.393-.167.722.257.338.471zm.962-1.093c-.297-.381-1.963-.181-2.713-.091-.228.028-.263-.171-.058-.315 1.329-.934 3.509-.664 3.762-.351.254.315-.066 2.494-1.315 3.537-.191.16-.375.075-.29-.136.281-.702.91-2.271.614-2.644z"/></svg>Shop on Amazon</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="problem-card medium">
+    <div class="problem-header"><span class="problem-name">Rear Axle Shaft Failure</span><span class="severity-badge medium">Medium Severity</span></div>
+    <p class="problem-desc">Under hard off-road use, the stock Dana 44 rear axle shafts on Rubicon models can snap. Non-Rubicon Sport and Sahara models have the weaker Dana 35, which is even more prone to failure with larger tires.</p>
+    <div class="problem-meta">
+      <div class="meta-item"><span class="meta-label">Frequency</span><span class="meta-val">Moderate (off-road use)</span></div>
+      <div class="meta-item"><span class="meta-label">Est. Repair Cost</span><span class="meta-val">$200 – $800</span></div>
+    </div>
+    <div class="fix-box">
+      <div class="fix-label">Recommended Fix</div>
+      <div class="fix-text">Upgrade to aftermarket chromoly axle shafts from Yukon Gear or Alloy USA if running 35"+ tires or wheeling hard. Consider a full axle upgrade on a Sport/Sahara with serious off-road plans.</div>
+      <div class="fix-buttons">
+        <a class="btn btn-yt" href="https://www.youtube.com/results?search_query=Jeep+JK+axle+shaft+replacement+chromoly+upgrade" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>Watch Fix</a>
+        <a class="btn btn-amz" href="https://www.amazon.com/s?k=Jeep+JK+Wrangler+chromoly+axle+shafts+Yukon&tag=jeeptj0b-20" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.699-3.182v.685zm3.186 7.705c-.209.189-.512.201-.745.076-1.052-.873-1.238-1.276-1.814-2.106-1.734 1.767-2.962 2.297-5.209 2.297-2.66 0-4.731-1.641-4.731-4.925 0-2.565 1.391-4.309 3.37-5.164 1.715-.754 4.11-.889 5.942-1.095v-.41c0-.753.06-1.642-.383-2.294-.385-.579-1.124-.82-1.776-.82-1.208 0-2.282.62-2.545 1.903-.054.285-.261.567-.548.582l-3.061-.33c-.259-.058-.546-.266-.472-.66C5.97 2.309 8.83 1.5 11.39 1.5c1.307 0 3.015.348 4.045 1.34 1.307 1.22 1.183 2.848 1.183 4.617v4.181c0 1.258.521 1.811 1.012 2.49.172.243.21.534-.01.714l-2.476 2.953h-.001zm3.637 1.664c-2.318 1.762-5.688 2.695-8.586 2.695-4.062 0-7.721-1.501-10.487-3.998-.217-.196-.023-.464.237-.311 2.987 1.738 6.682 2.78 10.497 2.78 2.573 0 5.398-.533 8.001-1.637.393-.167.722.257.338.471zm.962-1.093c-.297-.381-1.963-.181-2.713-.091-.228.028-.263-.171-.058-.315 1.329-.934 3.509-.664 3.762-.351.254.315-.066 2.494-1.315 3.537-.191.16-.375.075-.29-.136.281-.702.91-2.271.614-2.644z"/></svg>Shop on Amazon</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="problem-card medium">
+    <div class="problem-header"><span class="problem-name">3.6L Pentastar Cam Follower Wear</span><span class="severity-badge medium">Medium Severity</span></div>
+    <p class="problem-desc">The 3.6L Pentastar V6 (2012–2018) has a known issue with rocker arm cam followers wearing prematurely, often presenting as a ticking noise on startup. Can lead to camshaft damage if ignored.</p>
+    <div class="problem-meta">
+      <div class="meta-item"><span class="meta-label">Frequency</span><span class="meta-val">Moderate</span></div>
+      <div class="meta-item"><span class="meta-label">Affected Years</span><span class="meta-val">2012–2018</span></div>
+      <div class="meta-item"><span class="meta-label">Est. Repair Cost</span><span class="meta-val">$500 – $1,500</span></div>
+    </div>
+    <div class="fix-box">
+      <div class="fix-label">Recommended Fix</div>
+      <div class="fix-text">Use full synthetic oil and change at 5,000-mile intervals. At startup ticking, inspect immediately. Ensure any replacement uses the updated revised follower part number from Chrysler.</div>
+      <div class="fix-buttons">
+        <a class="btn btn-yt" href="https://www.youtube.com/results?search_query=Jeep+JK+3.6+Pentastar+cam+follower+tick+fix" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>Watch Fix</a>
+        <a class="btn btn-amz" href="https://www.amazon.com/s?k=Jeep+3.6+Pentastar+rocker+arm+cam+follower&tag=jeeptj0b-20" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.699-3.182v.685zm3.186 7.705c-.209.189-.512.201-.745.076-1.052-.873-1.238-1.276-1.814-2.106-1.734 1.767-2.962 2.297-5.209 2.297-2.66 0-4.731-1.641-4.731-4.925 0-2.565 1.391-4.309 3.37-5.164 1.715-.754 4.11-.889 5.942-1.095v-.41c0-.753.06-1.642-.383-2.294-.385-.579-1.124-.82-1.776-.82-1.208 0-2.282.62-2.545 1.903-.054.285-.261.567-.548.582l-3.061-.33c-.259-.058-.546-.266-.472-.66C5.97 2.309 8.83 1.5 11.39 1.5c1.307 0 3.015.348 4.045 1.34 1.307 1.22 1.183 2.848 1.183 4.617v4.181c0 1.258.521 1.811 1.012 2.49.172.243.21.534-.01.714l-2.476 2.953h-.001zm3.637 1.664c-2.318 1.762-5.688 2.695-8.586 2.695-4.062 0-7.721-1.501-10.487-3.998-.217-.196-.023-.464.237-.311 2.987 1.738 6.682 2.78 10.497 2.78 2.573 0 5.398-.533 8.001-1.637.393-.167.722.257.338.471zm.962-1.093c-.297-.381-1.963-.181-2.713-.091-.228.028-.263-.171-.058-.315 1.329-.934 3.509-.664 3.762-.351.254.315-.066 2.494-1.315 3.537-.191.16-.375.075-.29-.136.281-.702.91-2.271.614-2.644z"/></svg>Shop on Amazon</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="problem-card low">
+    <div class="problem-header"><span class="problem-name">Door &amp; Window Seal Leaks</span><span class="severity-badge low">Low Severity</span></div>
+    <p class="problem-desc">JK door weatherstripping deteriorates over time, allowing water to enter the cabin, especially at the top corners of the doors. A common complaint in heavy rain.</p>
+    <div class="problem-meta">
+      <div class="meta-item"><span class="meta-label">Frequency</span><span class="meta-val">Common</span></div>
+      <div class="meta-item"><span class="meta-label">Est. Repair Cost</span><span class="meta-val">$40 – $200</span></div>
+    </div>
+    <div class="fix-box">
+      <div class="fix-label">Recommended Fix</div>
+      <div class="fix-text">Replace the foam door corner seals (the "hockey pucks"). Full weatherstrip kits are available from Rugged Ridge and Steele Rubber. A worthwhile fix before winter.</div>
+      <div class="fix-buttons">
+        <a class="btn btn-yt" href="https://www.youtube.com/results?search_query=Jeep+JK+door+seal+leak+fix+weatherstrip" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>Watch Fix</a>
+        <a class="btn btn-amz" href="https://www.amazon.com/s?k=Jeep+JK+Wrangler+door+weatherstrip+seal+kit&tag=jeeptj0b-20" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.699-3.182v.685zm3.186 7.705c-.209.189-.512.201-.745.076-1.052-.873-1.238-1.276-1.814-2.106-1.734 1.767-2.962 2.297-5.209 2.297-2.66 0-4.731-1.641-4.731-4.925 0-2.565 1.391-4.309 3.37-5.164 1.715-.754 4.11-.889 5.942-1.095v-.41c0-.753.06-1.642-.383-2.294-.385-.579-1.124-.82-1.776-.82-1.208 0-2.282.62-2.545 1.903-.054.285-.261.567-.548.582l-3.061-.33c-.259-.058-.546-.266-.472-.66C5.97 2.309 8.83 1.5 11.39 1.5c1.307 0 3.015.348 4.045 1.34 1.307 1.22 1.183 2.848 1.183 4.617v4.181c0 1.258.521 1.811 1.012 2.49.172.243.21.534-.01.714l-2.476 2.953h-.001zm3.637 1.664c-2.318 1.762-5.688 2.695-8.586 2.695-4.062 0-7.721-1.501-10.487-3.998-.217-.196-.023-.464.237-.311 2.987 1.738 6.682 2.78 10.497 2.78 2.573 0 5.398-.533 8.001-1.637.393-.167.722.257.338.471zm.962-1.093c-.297-.381-1.963-.181-2.713-.091-.228.028-.263-.171-.058-.315 1.329-.934 3.509-.664 3.762-.351.254.315-.066 2.494-1.315 3.537-.191.16-.375.075-.29-.136.281-.702.91-2.271.614-2.644z"/></svg>Shop on Amazon</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="problem-card low">
+    <div class="problem-header"><span class="problem-name">NV241 Transfer Case Chain Wear</span><span class="severity-badge low">Low Severity</span></div>
+    <p class="problem-desc">The NV241 transfer case can develop a slip or rattle from a worn chain at higher mileage. Symptoms include popping out of 4WD or a rhythmic chain noise in 4-low.</p>
+    <div class="problem-meta">
+      <div class="meta-item"><span class="meta-label">Frequency</span><span class="meta-val">Moderate (high mileage)</span></div>
+      <div class="meta-item"><span class="meta-label">Est. Repair Cost</span><span class="meta-val">$400 – $1,200</span></div>
+    </div>
+    <div class="fix-box">
+      <div class="fix-label">Recommended Fix</div>
+      <div class="fix-text">Change transfer case fluid regularly with ATF+4. A chain and sprocket replacement kit is available for rebuilding in-place. Severe wear may require a reman unit.</div>
+      <div class="fix-buttons">
+        <a class="btn btn-yt" href="https://www.youtube.com/results?search_query=Jeep+JK+NV241+transfer+case+chain+replacement" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>Watch Fix</a>
+        <a class="btn btn-amz" href="https://www.amazon.com/s?k=NV241+transfer+case+chain+rebuild+kit&tag=jeeptj0b-20" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.699-3.182v.685zm3.186 7.705c-.209.189-.512.201-.745.076-1.052-.873-1.238-1.276-1.814-2.106-1.734 1.767-2.962 2.297-5.209 2.297-2.66 0-4.731-1.641-4.731-4.925 0-2.565 1.391-4.309 3.37-5.164 1.715-.754 4.11-.889 5.942-1.095v-.41c0-.753.06-1.642-.383-2.294-.385-.579-1.124-.82-1.776-.82-1.208 0-2.282.62-2.545 1.903-.054.285-.261.567-.548.582l-3.061-.33c-.259-.058-.546-.266-.472-.66C5.97 2.309 8.83 1.5 11.39 1.5c1.307 0 3.015.348 4.045 1.34 1.307 1.22 1.183 2.848 1.183 4.617v4.181c0 1.258.521 1.811 1.012 2.49.172.243.21.534-.01.714l-2.476 2.953h-.001zm3.637 1.664c-2.318 1.762-5.688 2.695-8.586 2.695-4.062 0-7.721-1.501-10.487-3.998-.217-.196-.023-.464.237-.311 2.987 1.738 6.682 2.78 10.497 2.78 2.573 0 5.398-.533 8.001-1.637.393-.167.722.257.338.471zm.962-1.093c-.297-.381-1.963-.181-2.713-.091-.228.028-.263-.171-.058-.315 1.329-.934 3.509-.664 3.762-.351.254.315-.066 2.494-1.315 3.537-.191.16-.375.075-.29-.136.281-.702.91-2.271.614-2.644z"/></svg>Shop on Amazon</a>
+      </div>
+    </div>
+  </div>
+
+</section>
+<div class="back-bar"><a href="index.html" class="back-link">← Back to Home</a></div>
+<div style="position:relative;z-index:2;background:rgba(10,6,2,0.95);border-top:2px solid #5a3f22;padding:1.5rem 2rem;text-align:center">
+  <div style="font-family:'Bebas Neue',cursive;font-size:1.6rem;letter-spacing:.1em;color:#e8c98d;margin-bottom:.3rem">Doc's Garage</div>
+  <div style="font-size:.8rem;color:#b08d62;font-style:italic;margin-bottom:1rem">Built by a Veteran. For Jeepers. Free forever.</div>
+  <div style="display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:1rem">
+    <a href="index.html" style="color:#b08d62;text-decoration:none;font-family:'Oswald',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase">Home</a>
+    <a href="jeep-tj-problems.html" style="color:#b08d62;text-decoration:none;font-family:'Oswald',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase">TJ Guide</a>
+    <a href="jeep-jk-problems.html" style="color:#b08d62;text-decoration:none;font-family:'Oswald',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase">JK Guide</a>
+    <a href="jeep-jl-problems.html" style="color:#b08d62;text-decoration:none;font-family:'Oswald',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase">JL Guide</a>
+    <a href="about.html" style="color:#b08d62;text-decoration:none;font-family:'Oswald',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase">About</a>
+    <a href="contact.html" style="color:#b08d62;text-decoration:none;font-family:'Oswald',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase">Contact</a>
+  </div>
+  <div style="font-size:.72rem;color:#3a2a1a">
+    &copy; 2026 Doc's Garage &nbsp;·&nbsp; For informational purposes only &nbsp;·&nbsp;
+    <strong style="color:#b08d62">Amazon Affiliate Disclosure:</strong> Doc's Garage earns a small commission on qualifying Amazon purchases at no extra cost to you.
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jeep JL Problems – 2018–Present Wrangler</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;600;700&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root { --olive:#4a5240;--olive-dark:#2e3328;--olive-light:#6b7560;--sand:#c8b89a;--sand-light:#e8ddd0;--rust:#b5451b;--rust-light:#d4602e;--cream:#f5f0e8;--dark:#1a1c18;--severity-high:#c0392b;--severity-med:#e67e22;--severity-low:#7f8c4f; }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Barlow',sans-serif;background:var(--dark);color:var(--cream)}
+    nav{position:sticky;top:0;z-index:100;background:rgba(26,28,24,0.95);backdrop-filter:blur(8px);border-bottom:1px solid rgba(200,184,154,0.1);padding:1rem 2rem;display:flex;align-items:center;gap:1rem}
+    nav a{text-decoration:none;color:var(--sand);font-size:.85rem;font-weight:600;letter-spacing:.05em}
+    nav a:first-child{color:var(--rust-light)} nav .sep{color:var(--olive-light)}
+    .nav-gen{margin-left:auto;font-family:'Black Ops One',cursive;font-size:1.5rem;color:rgba(200,184,154,0.2)}
+    .page-header{background:linear-gradient(135deg,#1a2028 0%,var(--dark) 60%);border-bottom:1px solid rgba(200,184,154,0.1);padding:4rem 2rem 3rem;position:relative;overflow:hidden}
+    .page-header::after{content:'JL';font-family:'Black Ops One',cursive;font-size:18rem;color:rgba(255,255,255,0.03);position:absolute;right:-2rem;bottom:-3rem;line-height:1;pointer-events:none}
+    .header-inner{max-width:900px;margin:0 auto}
+    .gen-pill{display:inline-flex;align-items:center;gap:.5rem;background:rgba(181,69,27,0.2);border:1px solid rgba(181,69,27,0.4);padding:.3rem .8rem;border-radius:2px;font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--rust-light);margin-bottom:1rem}
+    .page-title{font-family:'Black Ops One',cursive;font-size:clamp(2.5rem,6vw,5rem);line-height:1;margin-bottom:.5rem}
+    .page-years{font-family:'Barlow Condensed',sans-serif;font-size:1.2rem;font-weight:600;color:var(--sand);letter-spacing:.1em;margin-bottom:1rem}
+    .page-intro{color:var(--sand);max-width:600px;line-height:1.7;font-size:1rem}
+    .stats-bar{background:rgba(74,82,64,0.2);border-bottom:1px solid rgba(200,184,154,0.08);padding:1rem 2rem}
+    .stats-inner{max-width:900px;margin:0 auto;display:flex;gap:2rem;flex-wrap:wrap}
+    .stat{display:flex;flex-direction:column;gap:.1rem}
+    .stat-val{font-family:'Black Ops One',cursive;font-size:1.4rem;color:var(--rust-light)}
+    .stat-label{font-size:.7rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--olive-light)}
+    .problems-section{max-width:900px;margin:0 auto;padding:3rem 2rem}
+    .problems-title{font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--sand);margin-bottom:2rem}
+    .problem-card{background:rgba(255,255,255,0.03);border:1px solid rgba(200,184,154,0.1);border-left:4px solid var(--severity-high);border-radius:0 4px 4px 0;padding:1.75rem;margin-bottom:1.25rem;transition:background .2s}
+    .problem-card:hover{background:rgba(255,255,255,0.05)} .problem-card.medium{border-left-color:var(--severity-med)} .problem-card.low{border-left-color:var(--severity-low)}
+    .problem-header{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:.75rem;flex-wrap:wrap}
+    .problem-name{font-family:'Black Ops One',cursive;font-size:1.3rem;color:var(--cream)}
+    .severity-badge{font-family:'Barlow Condensed',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.2rem .6rem;border-radius:2px;flex-shrink:0}
+    .severity-badge.high{background:rgba(192,57,43,0.2);color:#e74c3c;border:1px solid rgba(192,57,43,0.4)}
+    .severity-badge.medium{background:rgba(230,126,34,0.2);color:#e67e22;border:1px solid rgba(230,126,34,0.4)}
+    .severity-badge.low{background:rgba(127,140,79,0.2);color:#a8c56e;border:1px solid rgba(127,140,79,0.4)}
+    .problem-desc{color:var(--sand);line-height:1.7;font-size:.95rem;margin-bottom:1rem}
+    .problem-meta{display:flex;gap:2rem;flex-wrap:wrap}
+    .meta-item{display:flex;flex-direction:column;gap:.15rem}
+    .meta-label{font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--olive-light)}
+    .meta-val{font-size:.875rem;font-weight:600;color:var(--sand-light)}
+    .fix-box{margin-top:1rem;padding:.875rem 1rem 1rem;background:rgba(74,82,64,0.2);border-left:2px solid var(--olive);border-radius:0 2px 2px 0}
+    .fix-label{font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--olive-light);margin-bottom:.25rem}
+    .fix-text{font-size:.875rem;color:var(--sand);line-height:1.6;margin-bottom:.875rem}
+    .fix-buttons{display:flex;gap:.6rem;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:.4rem;padding:.45rem .9rem;border-radius:3px;font-family:'Barlow Condensed',sans-serif;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:opacity .2s,transform .15s}
+    .btn:hover{opacity:.85;transform:translateY(-1px)} .btn-yt{background:#ff0000;color:#fff} .btn-amz{background:#ff9900;color:#111}
+    .btn svg{width:14px;height:14px;fill:currentColor;flex-shrink:0}
+    .back-bar{max-width:900px;margin:0 auto;padding:0 2rem 3rem}
+    .back-link{display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-size:.85rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--rust-light);transition:gap .2s}
+    .back-link:hover{gap:.75rem}
+    footer{border-top:1px solid rgba(200,184,154,0.08);padding:2rem;text-align:center;font-size:.8rem;color:var(--olive-light)}
+  
+    /* CAMO BACKGROUND */
+    body { background-color: #7a5c38; background-image: repeating-conic-gradient(at 0% 0%,#5a3f22 0deg 90deg,transparent 90deg 180deg),repeating-conic-gradient(at 100% 100%,#c4a97d44 0deg 90deg,transparent 90deg 180deg); background-size: 64px 64px, 32px 32px; }
+    body::before { content: ''; position: fixed; inset: 0; z-index: 0; pointer-events: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='128'%3E%3Crect width='128' height='128' fill='%237a5c38'/%3E%3Crect x='0' y='0' width='32' height='16' fill='%235a3f22'/%3E%3Crect x='32' y='0' width='16' height='32' fill='%23c4a97d'/%3E%3Crect x='48' y='0' width='32' height='16' fill='%235a3f22'/%3E%3Crect x='96' y='0' width='32' height='16' fill='%23c4a97d'/%3E%3Crect x='0' y='16' width='16' height='16' fill='%23c4a97d'/%3E%3Crect x='16' y='16' width='32' height='16' fill='%237a5c38'/%3E%3Crect x='64' y='16' width='16' height='16' fill='%235a3f22'/%3E%3Crect x='80' y='16' width='32' height='16' fill='%237a5c38'/%3E%3Crect x='112' y='16' width='16' height='32' fill='%235a3f22'/%3E%3Crect x='0' y='32' width='48' height='16' fill='%237a5c38'/%3E%3Crect x='48' y='32' width='16' height='16' fill='%23c4a97d'/%3E%3Crect x='64' y='32' width='32' height='16' fill='%235a3f22'/%3E%3Crect x='96' y='32' width='16' height='16' fill='%237a5c38'/%3E%3Crect x='0' y='48' width='16' height='32' fill='%235a3f22'/%3E%3Crect x='16' y='48' width='32' height='16' fill='%23c4a97d'/%3E%3Crect x='48' y='48' width='32' height='32' fill='%237a5c38'/%3E%3Crect x='80' y='48' width='16' height='16' fill='%23c4a97d'/%3E%3Crect x='96' y='48' width='32' height='16' fill='%235a3f22'/%3E%3Crect x='16' y='64' width='16' height='16' fill='%235a3f22'/%3E%3Crect x='32' y='64' width='16' height='32' fill='%235a3f22'/%3E%3Crect x='80' y='64' width='32' height='16' fill='%237a5c38'/%3E%3Crect x='112' y='64' width='16' height='16' fill='%23c4a97d'/%3E%3Crect x='0' y='80' width='32' height='16' fill='%23c4a97d'/%3E%3Crect x='48' y='80' width='16' height='16' fill='%23c4a97d'/%3E%3Crect x='64' y='80' width='16' height='32' fill='%235a3f22'/%3E%3Crect x='80' y='80' width='16' height='16' fill='%235a3f22'/%3E%3Crect x='96' y='80' width='32' height='32' fill='%23c4a97d'/%3E%3Crect x='0' y='96' width='16' height='32' fill='%237a5c38'/%3E%3Crect x='16' y='96' width='16' height='32' fill='%235a3f22'/%3E%3Crect x='32' y='96' width='32' height='16' fill='%237a5c38'/%3E%3Crect x='80' y='96' width='16' height='32' fill='%237a5c38'/%3E%3Crect x='32' y='112' width='16' height='16' fill='%23c4a97d'/%3E%3Crect x='48' y='112' width='16' height='16' fill='%235a3f22'/%3E%3Crect x='64' y='112' width='16' height='16' fill='%237a5c38'/%3E%3C/svg%3E"); background-size: 128px 128px; opacity: 0.55; }
+    body::after { content: ''; position: fixed; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(180deg,rgba(26,16,8,0.85) 0%,rgba(26,16,8,0.75) 40%,rgba(26,16,8,0.85) 100%); }
+    nav, header, section, .stats-bar, .problems-section, .back-bar, footer, .disclaimer-bar { position: relative; z-index: 2; }
+
+    nav a { text-decoration: none; font-family: 'Oswald', sans-serif; font-size: .75rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #f0d9a8; padding: 0 .9rem; height: 60px; display: inline-flex; align-items: center; border-bottom: 3px solid transparent; transition: color .2s, border-color .2s; }
+    nav a:hover, nav a.active { color: #e8c98d; border-bottom-color: #e8662a; }
+
+  </style>
+</head>
+<body>
+<div class="disclaimer-bar" style="position:relative;z-index:2;background:rgba(139,58,26,0.9);border-bottom:1px solid rgba(232,102,42,0.5);padding:.6rem 2rem;text-align:center;font-family:'Oswald',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,0.9)">
+  ⚠️ &nbsp; For Educational &amp; Informational Purposes Only &nbsp;·&nbsp; Always consult a qualified mechanic before performing repairs
+</div>
+<nav style="position:sticky;top:0;z-index:100;background:rgba(26,16,8,0.95);backdrop-filter:blur(10px);border-bottom:2px solid #81613c;padding:0 1.5rem;display:flex;align-items:center;height:60px;gap:0">
+  <a href="index.html" style="font-family:'Bebas Neue',cursive;font-size:1.5rem;letter-spacing:.08em;color:#e8c98d;text-decoration:none;margin-right:auto;display:flex;align-items:center;gap:.5rem">
+    <span style="width:28px;height:28px;background:#81613c;clip-path:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);display:inline-flex;align-items:center;justify-content:center;font-size:.8rem">🔧</span>
+    Doc's Garage
+  </a>
+  <div style="display:flex;flex-wrap:wrap">
+    <a href="index.html">Home</a><a href="jeep-tj-problems.html">TJ Guide</a><a href="jeep-jk-problems.html">JK Guide</a><a href="jeep-jl-problems.html" class="active">JL Guide</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+  </div>
+</nav>
+<header class="page-header">
+  <div class="header-inner">
+    <div class="gen-pill">Generation JL</div>
+    <h1 class="page-title">Wrangler JL</h1>
+    <div class="page-years">2018 – Present</div>
+    <p class="page-intro">The JL is the most refined Wrangler ever built — better on-road manners, improved fuel economy, a turbo four-cylinder option, and an available diesel. But no Jeep is problem-free, and the JL has its own growing list of known issues.</p>
+  </div>
+</header>
+<div class="stats-bar"><div class="stats-inner">
+  <div class="stat"><span class="stat-val">9</span><span class="stat-label">Known Issues</span></div>
+  <div class="stat"><span class="stat-val">3</span><span class="stat-label">High Severity</span></div>
+  <div class="stat"><span class="stat-val">3.6L / 2.0T / 3.0D</span><span class="stat-label">Engine Options</span></div>
+  <div class="stat"><span class="stat-val">2018–Present</span><span class="stat-label">Model Years</span></div>
+</div></div>
+<section class="problems-section">
+  <div class="problems-title">Common Problems &amp; Issues</div>
+
+  <div class="problem-card high">
+    <div class="problem-header"><span class="problem-name">Sudden Engine Stall</span><span class="severity-badge high">High Severity</span></div>
+    <p class="problem-desc">A frightening and well-documented issue: the JL's engine can stall without warning while driving, sometimes failing to restart immediately. Both the 2.0L turbocharged engine and 3.6L Pentastar are implicated. Multiple NHTSA complaints and software TSBs have been issued.</p>
+    <div class="problem-meta">
+      <div class="meta-item"><span class="meta-label">Frequency</span><span class="meta-val">Moderate</span></div>
+      <div class="meta-item"><span class="meta-label">Affected Years</span><span class="meta-val">2018–2022 (primarily)</span></div>
+      <div class="meta-item"><span class="meta-label">Est. Repair Cost</span><span class="meta-val">$0 (recall) – $1,500</span></div>
+    </div>
+    <div class="fix-box">
+      <div class="fix-label">Recommended Fix</div>
+      <div class="fix-text">Check for open recalls and TSBs at NHTSA.gov using your VIN — many are covered under warranty. Common fixes include PCM/ECM software flashes from the dealer.</div>
+      <div class="fix-buttons">
+        <a class="btn btn-yt" href="https://www.youtube.com/results?search_query=Jeep+JL+Wrangler+engine+stall+fix+PCM+update" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>Watch Fix</a>
+        <a class="btn btn-amz" href="https://www.amazon.com/s?k=OBD2+scanner+Jeep+Wrangler+JL&tag=jeeptj0b-20" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.699-3.182v.685zm3.186 7.705c-.209.189-.512.201-.745.076-1.052-.873-1.238-1.276-1.814-2.106-1.734 1.767-2.962 2.297-5.209 2.297-2.66 0-4.731-1.641-4.731-4.925 0-2.565 1.391-4.309 3.37-5.164 1.715-.754 4.11-.889 5.942-1.095v-.41c0-.753.06-1.642-.383-2.294-.385-.579-1.124-.82-1.776-.82-1.208 0-2.282.62-2.545 1.903-.054.285-.261.567-.548.582l-3.061-.33c-.259-.058-.546-.266-.472-.66C5.97 2.309 8.83 1.5 11.39 1.5c1.307 0 3.015.348 4.045 1.34 1.307 1.22 1.183 2.848 1.183 4.617v4.181c0 1.258.521 1.811 1.012 2.49.172.243.21.534-.01.714l-2.476 2.953h-.001zm3.637 1.664c-2.318 1.762-5.688 2.695-8.586 2.695-4.062 0-7.721-1.501-10.487-3.998-.217-.196-.023-.464.237-.311 2.987 1.738 6.682 2.78 10.497 2.78 2.573 0 5.398-.533 8.001-1.637.393-.167.722.257.338.471zm.962-1.093c-.297-.381-1.963-.181-2.713-.091-.228.028-.263-.171-.058-.315 1.329-.934 3.509-.664 3.762-.351.254.315-.066 2.494-1.315 3.537-.191.16-.375.075-.29-.136.281-.702.91-2.271.614-2.644z"/></svg>Shop on Amazon</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="problem-card high">
+    <div class="problem-header"><span class="problem-name">Water Intrusion / Cabin Leaks</span><span class="severity-badge high">High Severity</span></div>
+    <p class="problem-desc">JL owners report water entering the cabin from multiple points: the soft top, hardtop seams, windshield frame, door corners, and even the footwells. Chronic leaks can cause mold, electrical damage, and wet carpet.</p>
+    <div class="problem-meta">
+      <div class="meta-item"><span class="meta-label">Frequency</span><span class="meta-val">Very Common</span></div>
+      <div class="meta-item"><span class="meta-label">Affected Years</span><span class="meta-val">All JL years</span></div>
+      <div class="meta-item"><span class="meta-label">Est. Repair Cost</span><span class="meta-val">$0 – $800 (dealer)</span></div>
+    </div>
+    <div class="fix-box">
+      <div class="fix-label">Recommended Fix</div>
+      <div class="fix-text">Take to dealer under warranty — many leak points have TSBs with corrected seals or procedures. For hardtop owners, ensure the Freedom Panel foam seals are seated properly. Aftermarket door seals from Steele Rubber help with door corner drips.</div>
+      <div class="fix-buttons">
+        <a class="btn btn-yt" href="https://www.youtube.com/results?search_query=Jeep+JL+Wrangler+water+leak+fix+door+seal" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>Watch Fix</a>
+        <a class="btn btn-amz" href="https://www.amazon.com/s?k=Jeep+JL+Wrangler+door+seal+weatherstrip+leak&tag=jeeptj0b-20" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.699-3.182v.685zm3.186 7.705c-.209.189-.512.201-.745.076-1.052-.873-1.238-1.276-1.814-2.106-1.734 1.767-2.962 2.297-5.209 2.297-2.66 0-4.731-1.641-4.731-4.925 0-2.565 1.391-4.309 3.37-5.164 1.715-.754 4.11-.889 5.942-1.095v-.41c0-.753.06-1.642-.383-2.294-.385-.579-1.124-.82-1.776-.82-1.208 0-2.282.62-2.545 1.903-.054.285-.261.567-.548.582l-3.061-.33c-.259-.058-.546-.266-.472-.66C5.97 2.309 8.83 1.5 11.39 1.5c1.307 0 3.015.348 4.045 1.34 1.307 1.22 1.183 2.848 1.183 4.617v4.181c0 1.258.521 1.811 1.012 2.49.172.243.21.534-.01.714l-2.476 2.953h-.001zm3.637 1.664c-2.318 1.762-5.688 2.695-8.586 2.695-4.062 0-7.721-1.501-10.487-3.998-.217-.196-.023-.464.237-.311 2.987 1.738 6.682 2.78 10.497 2.78 2.573 0 5.398-.533 8.001-1.637.393-.167.722.257.338.471zm.962-1.093c-.297-.381-1.963-.181-2.713-.091-.228.028-.263-.171-.058-.315 1.329-.934 3.509-.664 3.762-.351.254.315-.066 2.494-1.315 3.537-.191.16-.375.075-.29-.136.281-.702.91-2.271.614-2.644z"/></svg>Shop on Amazon</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="problem-card high">
+    <div class="problem-header"><span class="problem-name">eTorque Mild Hybrid Failures</span><span class="severity-badge high">High Severity</span></div>
+    <p class="problem-desc">The optional eTorque mild-hybrid system has generated numerous complaints regarding failure, unexpected power loss, and battery management module issues. When it fails, it can leave the Jeep in a limp-home or no-start condition.</p>
+    <div class="problem-meta">
+      <div class="meta-item"><span class="meta-label">Frequency</span><span class="meta-val">Moderate</span></div>
+      <div class="meta-item"><span class="meta-label">Affected Years</span><span class="meta-val">2020–Present (eTorque)</span></div>
+      <div class="meta-item"><span class="meta-label">Est. Repair Cost</span><span class="meta-val">$800 – $3,500</span></div>
+    </div>
+    <div class="fix-box">
+      <div class="fix-label">Recommended Fix</div>
+      <div class="fix-text">Check for open recalls and software updates through your dealer. The 48V battery module is the most common failure point and is typically replaced under powertrain warranty.</div>
+      <div class="fix-buttons">
+        <a class="btn btn-yt" href="https://www.youtube.com/results?search_query=Jeep+JL+eTorque+failure+fix+48V+battery" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>Watch Fix</a>
+        <a class="btn btn-amz" href="https://www.amazon.com/s?k=Jeep+JL+Wrangler+eTorque+48V+battery+module&tag=jeeptj0b-20" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.699-3.182v.685zm3.186 7.705c-.209.189-.512.201-.745.076-1.052-.873-1.238-1.276-1.814-2.106-1.734 1.767-2.962 2.297-5.209 2.297-2.66 0-4.731-1.641-4.731-4.925 0-2.565 1.391-4.309 3.37-5.164 1.715-.754 4.11-.889 5.942-1.095v-.41c0-.753.06-1.642-.383-2.294-.385-.579-1.124-.82-1.776-.82-1.208 0-2.282.62-2.545 1.903-.054.285-.261.567-.548.582l-3.061-.33c-.259-.058-.546-.266-.472-.66C5.97 2.309 8.83 1.5 11.39 1.5c1.307 0 3.015.348 4.045 1.34 1.307 1.22 1.183 2.848 1.183 4.617v4.181c0 1.258.521 1.811 1.012 2.49.172.243.21.534-.01.714l-2.476 2.953h-.001zm3.637 1.664c-2.318 1.762-5.688 2.695-8.586 2.695-4.062 0-7.721-1.501-10.487-3.998-.217-.196-.023-.464.237-.311 2.987 1.738 6.682 2.78 10.497 2.78 2.573 0 5.398-.533 8.001-1.637.393-.167.722.257.338.471zm.962-1.093c-.297-.381-1.963-.181-2.713-.091-.228.028-.263-.171-.058-.315 1.329-.934 3.509-.664 3.762-.351.254.315-.066 2.494-1.315 3.537-.191.16-.375.075-.29-.136.281-.702.91-2.271.614-2.644z"/></svg>Shop on Amazon</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="problem-card medium">
+    <div class="problem-header"><span class="problem-name">Uconnect Infotainment Bugs</span><span class="severity-badge medium">Medium Severity</span></div>
+    <p class="problem-desc">The 8.4" Uconnect 4C system can freeze, reboot spontaneously, lose pairing, or fail to connect to CarPlay/Android Auto. It's a software-heavy system that struggles with stability across model years.</p>
+    <div class="problem-meta">
+      <div class="meta-item"><span class="meta-label">Frequency</span><span class="meta-val">Common</span></div>
+      <div class="meta-item"><span class="meta-label">Est. Repair Cost</span><span class="meta-val">$0 (update) – $800</span></div>
+    </div>
+    <div class="fix-box">
+      <div class="fix-label">Recommended Fix</div>
+      <div class="fix-text">Apply the latest Uconnect software update via USB (downloadable from Jeep's website). If issues persist after update, a dealer can perform a head unit reset or replacement under warranty.</div>
+      <div class="fix-buttons">
+        <a class="btn btn-yt" href="https://www.youtube.com/results?search_query=Jeep+JL+Uconnect+update+fix+freeze+reboot" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>Watch Fix</a>
+        <a class="btn btn-amz" href="https://www.amazon.com/s?k=USB+drive+Uconnect+update+Jeep&tag=jeeptj0b-20" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.699-3.182v.685zm3.186 7.705c-.209.189-.512.201-.745.076-1.052-.873-1.238-1.276-1.814-2.106-1.734 1.767-2.962 2.297-5.209 2.297-2.66 0-4.731-1.641-4.731-4.925 0-2.565 1.391-4.309 3.37-5.164 1.715-.754 4.11-.889 5.942-1.095v-.41c0-.753.06-1.642-.383-2.294-.385-.579-1.124-.82-1.776-.82-1.208 0-2.282.62-2.545 1.903-.054.285-.261.567-.548.582l-3.061-.33c-.259-.058-.546-.266-.472-.66C5.97 2.309 8.83 1.5 11.39 1.5c1.307 0 3.015.348 4.045 1.34 1.307 1.22 1.183 2.848 1.183 4.617v4.181c0 1.258.521 1.811 1.012 2.49.172.243.21.534-.01.714l-2.476 2.953h-.001zm3.637 1.664c-2.318 1.762-5.688 2.695-8.586 2.695-4.062 0-7.721-1.501-10.487-3.998-.217-.196-.023-.464.237-.311 2.987 1.738 6.682 2.78 10.497 2.78 2.573 0 5.398-.533 8.001-1.637.393-.167.722.257.338.471zm.962-1.093c-.297-.381-1.963-.181-2.713-.091-.228.028-.263-.171-.058-.315 1.329-.934 3.509-.664 3.762-.351.254.315-.066 2.494-1.315 3.537-.191.16-.375.075-.29-.136.281-.702.91-2.271.614-2.644z"/></svg>Shop on Amazon</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="problem-card medium">
+    <div class="problem-header"><span class="problem-name">2.0L Turbo Oil Consumption</span><span class="severity-badge medium">Medium Severity</span></div>
+    <p class="problem-desc">The 2.0L turbocharged four-cylinder has reports of higher-than-expected oil consumption, particularly in early production units. Some owners report consuming a quart every 2,000–3,000 miles.</p>
+    <div class="problem-meta">
+      <div class="meta-item"><span class="meta-label">Frequency</span><span class="meta-val">Moderate</span></div>
+      <div class="meta-item"><span class="meta-label">Affected Years</span><span class="meta-val">2018–2021 (2.0L)</span></div>
+      <div class="meta-item"><span class="meta-label">Est. Repair Cost</span><span class="meta-val">$0 – $2,000</span></div>
+    </div>
+    <div class="fix-box">
+      <div class="fix-label">Recommended Fix</div>
+      <div class="fix-text">Check oil level monthly and document consumption. Dealers may perform an oil consumption test if it exceeds factory spec. FCA/Stellantis has addressed some cases under warranty with updated piston rings.</div>
+      <div class="fix-buttons">
+        <a class="btn btn-yt" href="https://www.youtube.com/results?search_query=Jeep+JL+2.0+turbo+oil+consumption+fix" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>Watch Fix</a>
+        <a class="btn btn-amz" href="https://www.amazon.com/s?k=Jeep+JL+2.0+turbo+oil+catch+can&tag=jeeptj0b-20" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.699-3.182v.685zm3.186 7.705c-.209.189-.512.201-.745.076-1.052-.873-1.238-1.276-1.814-2.106-1.734 1.767-2.962 2.297-5.209 2.297-2.66 0-4.731-1.641-4.731-4.925 0-2.565 1.391-4.309 3.37-5.164 1.715-.754 4.11-.889 5.942-1.095v-.41c0-.753.06-1.642-.383-2.294-.385-.579-1.124-.82-1.776-.82-1.208 0-2.282.62-2.545 1.903-.054.285-.261.567-.548.582l-3.061-.33c-.259-.058-.546-.266-.472-.66C5.97 2.309 8.83 1.5 11.39 1.5c1.307 0 3.015.348 4.045 1.34 1.307 1.22 1.183 2.848 1.183 4.617v4.181c0 1.258.521 1.811 1.012 2.49.172.243.21.534-.01.714l-2.476 2.953h-.001zm3.637 1.664c-2.318 1.762-5.688 2.695-8.586 2.695-4.062 0-7.721-1.501-10.487-3.998-.217-.196-.023-.464.237-.311 2.987 1.738 6.682 2.78 10.497 2.78 2.573 0 5.398-.533 8.001-1.637.393-.167.722.257.338.471zm.962-1.093c-.297-.381-1.963-.181-2.713-.091-.228.028-.263-.171-.058-.315 1.329-.934 3.509-.664 3.762-.351.254.315-.066 2.494-1.315 3.537-.191.16-.375.075-.29-.136.281-.702.91-2.271.614-2.644z"/></svg>Shop on Amazon</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="problem-card medium">
+    <div class="problem-header"><span class="problem-name">8-Speed Transmission Shudder</span><span class="severity-badge medium">Medium Severity</span></div>
+    <p class="problem-desc">The 8HP75 8-speed automatic can exhibit a shudder or vibration at light throttle during low-speed cruising — particularly when the torque converter lockup clutch engages around 25–45 mph.</p>
+    <div class="problem-meta">
+      <div class="meta-item"><span class="meta-label">Frequency</span><span class="meta-val">Moderate</span></div>
+      <div class="meta-item"><span class="meta-label">Est. Repair Cost</span><span class="meta-val">$0 (fluid) – $1,500</span></div>
+    </div>
+    <div class="fix-box">
+      <div class="fix-label">Recommended Fix</div>
+      <div class="fix-text">A transmission fluid flush with updated HP ATF+4 fluid often resolves shudder. Some cases require a TCM software update. Severe cases may need a torque converter replacement.</div>
+      <div class="fix-buttons">
+        <a class="btn btn-yt" href="https://www.youtube.com/results?search_query=Jeep+JL+8+speed+transmission+shudder+fix" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>Watch Fix</a>
+        <a class="btn btn-amz" href="https://www.amazon.com/s?k=Mopar+ATF+4+automatic+transmission+fluid&tag=jeeptj0b-20" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.699-3.182v.685zm3.186 7.705c-.209.189-.512.201-.745.076-1.052-.873-1.238-1.276-1.814-2.106-1.734 1.767-2.962 2.297-5.209 2.297-2.66 0-4.731-1.641-4.731-4.925 0-2.565 1.391-4.309 3.37-5.164 1.715-.754 4.11-.889 5.942-1.095v-.41c0-.753.06-1.642-.383-2.294-.385-.579-1.124-.82-1.776-.82-1.208 0-2.282.62-2.545 1.903-.054.285-.261.567-.548.582l-3.061-.33c-.259-.058-.546-.266-.472-.66C5.97 2.309 8.83 1.5 11.39 1.5c1.307 0 3.015.348 4.045 1.34 1.307 1.22 1.183 2.848 1.183 4.617v4.181c0 1.258.521 1.811 1.012 2.49.172.243.21.534-.01.714l-2.476 2.953h-.001zm3.637 1.664c-2.318 1.762-5.688 2.695-8.586 2.695-4.062 0-7.721-1.501-10.487-3.998-.217-.196-.023-.464.237-.311 2.987 1.738 6.682 2.78 10.497 2.78 2.573 0 5.398-.533 8.001-1.637.393-.167.722.257.338.471zm.962-1.093c-.297-.381-1.963-.181-2.713-.091-.228.028-.263-.171-.058-.315 1.329-.934 3.509-.664 3.762-.351.254.315-.066 2.494-1.315 3.537-.191.16-.375.075-.29-.136.281-.702.91-2.271.614-2.644z"/></svg>Shop on Amazon</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="problem-card medium">
+    <div class="problem-header"><span class="problem-name">EcoDiesel DPF / DEF Issues</span><span class="severity-badge medium">Medium Severity</span></div>
+    <p class="problem-desc">The 3.0L EcoDiesel brings excellent torque and fuel economy but comes with diesel-specific headaches: DPF clogging in city-driven vehicles and DEF system faults generating check engine lights.</p>
+    <div class="problem-meta">
+      <div class="meta-item"><span class="meta-label">Frequency</span><span class="meta-val">Moderate (city driving)</span></div>
+      <div class="meta-item"><span class="meta-label">Affected Years</span><span class="meta-val">2020–Present (EcoDiesel)</span></div>
+      <div class="meta-item"><span class="meta-label">Est. Repair Cost</span><span class="meta-val">$200 – $2,000</span></div>
+    </div>
+    <div class="fix-box">
+      <div class="fix-label">Recommended Fix</div>
+      <div class="fix-text">Allow the vehicle to complete active regeneration cycles — highway driving at speed for 20+ minutes periodically. Keep DEF fluid topped up with quality fluid. Avoid extended idling.</div>
+      <div class="fix-buttons">
+        <a class="btn btn-yt" href="https://www.youtube.com/results?search_query=Jeep+JL+EcoDiesel+DPF+regen+DEF+fix" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>Watch Fix</a>
+        <a class="btn btn-amz" href="https://www.amazon.com/s?k=diesel+exhaust+fluid+DEF+32oz&tag=jeeptj0b-20" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.699-3.182v.685zm3.186 7.705c-.209.189-.512.201-.745.076-1.052-.873-1.238-1.276-1.814-2.106-1.734 1.767-2.962 2.297-5.209 2.297-2.66 0-4.731-1.641-4.731-4.925 0-2.565 1.391-4.309 3.37-5.164 1.715-.754 4.11-.889 5.942-1.095v-.41c0-.753.06-1.642-.383-2.294-.385-.579-1.124-.82-1.776-.82-1.208 0-2.282.62-2.545 1.903-.054.285-.261.567-.548.582l-3.061-.33c-.259-.058-.546-.266-.472-.66C5.97 2.309 8.83 1.5 11.39 1.5c1.307 0 3.015.348 4.045 1.34 1.307 1.22 1.183 2.848 1.183 4.617v4.181c0 1.258.521 1.811 1.012 2.49.172.243.21.534-.01.714l-2.476 2.953h-.001zm3.637 1.664c-2.318 1.762-5.688 2.695-8.586 2.695-4.062 0-7.721-1.501-10.487-3.998-.217-.196-.023-.464.237-.311 2.987 1.738 6.682 2.78 10.497 2.78 2.573 0 5.398-.533 8.001-1.637.393-.167.722.257.338.471zm.962-1.093c-.297-.381-1.963-.181-2.713-.091-.228.028-.263-.171-.058-.315 1.329-.934 3.509-.664 3.762-.351.254.315-.066 2.494-1.315 3.537-.191.16-.375.075-.29-.136.281-.702.91-2.271.614-2.644z"/></svg>Shop on Amazon</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="problem-card low">
+    <div class="problem-header"><span class="problem-name">Windshield Cracking</span><span class="severity-badge low">Low Severity</span></div>
+    <p class="problem-desc">The JL's large windshield is prone to cracking from minor stone chips. The original factory glass has a reputation for being thinner and more crack-prone than aftermarket replacements.</p>
+    <div class="problem-meta">
+      <div class="meta-item"><span class="meta-label">Frequency</span><span class="meta-val">Common</span></div>
+      <div class="meta-item"><span class="meta-label">Est. Repair Cost</span><span class="meta-val">$300 – $700</span></div>
+    </div>
+    <div class="fix-box">
+      <div class="fix-label">Recommended Fix</div>
+      <div class="fix-text">Replace with OEM or Pilkington aftermarket glass — many owners find replacements hold up better than original. Add a windshield protection film to prevent future chips from spreading.</div>
+      <div class="fix-buttons">
+        <a class="btn btn-yt" href="https://www.youtube.com/results?search_query=Jeep+JL+windshield+replacement+crack+fix" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>Watch Fix</a>
+        <a class="btn btn-amz" href="https://www.amazon.com/s?k=windshield+protection+film+Jeep+Wrangler&tag=jeeptj0b-20" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.699-3.182v.685zm3.186 7.705c-.209.189-.512.201-.745.076-1.052-.873-1.238-1.276-1.814-2.106-1.734 1.767-2.962 2.297-5.209 2.297-2.66 0-4.731-1.641-4.731-4.925 0-2.565 1.391-4.309 3.37-5.164 1.715-.754 4.11-.889 5.942-1.095v-.41c0-.753.06-1.642-.383-2.294-.385-.579-1.124-.82-1.776-.82-1.208 0-2.282.62-2.545 1.903-.054.285-.261.567-.548.582l-3.061-.33c-.259-.058-.546-.266-.472-.66C5.97 2.309 8.83 1.5 11.39 1.5c1.307 0 3.015.348 4.045 1.34 1.307 1.22 1.183 2.848 1.183 4.617v4.181c0 1.258.521 1.811 1.012 2.49.172.243.21.534-.01.714l-2.476 2.953h-.001zm3.637 1.664c-2.318 1.762-5.688 2.695-8.586 2.695-4.062 0-7.721-1.501-10.487-3.998-.217-.196-.023-.464.237-.311 2.987 1.738 6.682 2.78 10.497 2.78 2.573 0 5.398-.533 8.001-1.637.393-.167.722.257.338.471zm.962-1.093c-.297-.381-1.963-.181-2.713-.091-.228.028-.263-.171-.058-.315 1.329-.934 3.509-.664 3.762-.351.254.315-.066 2.494-1.315 3.537-.191.16-.375.075-.29-.136.281-.702.91-2.271.614-2.644z"/></svg>Shop on Amazon</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="problem-card low">
+    <div class="problem-header"><span class="problem-name">Death Wobble (Lifted JLs)</span><span class="severity-badge low">Low Severity</span></div>
+    <p class="problem-desc">While the JL's suspension geometry improvements reduced death wobble vs. the JK, it's not eliminated — especially after lift kits are installed without corresponding corrective components like a heavy-duty adjustable track bar.</p>
+    <div class="problem-meta">
+      <div class="meta-item"><span class="meta-label">Frequency</span><span class="meta-val">Low (stock), Moderate (lifted)</span></div>
+      <div class="meta-item"><span class="meta-label">Est. Repair Cost</span><span class="meta-val">$300 – $1,200</span></div>
+    </div>
+    <div class="fix-box">
+      <div class="fix-label">Recommended Fix</div>
+      <div class="fix-text">When lifting a JL, always pair the lift with a heavy-duty adjustable track bar and correct caster with adjustable control arms. Inspect all steering components for wear if wobble develops on a stock vehicle.</div>
+      <div class="fix-buttons">
+        <a class="btn btn-yt" href="https://www.youtube.com/results?search_query=Jeep+JL+death+wobble+lift+kit+fix+track+bar" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>Watch Fix</a>
+        <a class="btn btn-amz" href="https://www.amazon.com/s?k=Jeep+JL+Wrangler+adjustable+track+bar&tag=jeeptj0b-20" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.699-3.182v.685zm3.186 7.705c-.209.189-.512.201-.745.076-1.052-.873-1.238-1.276-1.814-2.106-1.734 1.767-2.962 2.297-5.209 2.297-2.66 0-4.731-1.641-4.731-4.925 0-2.565 1.391-4.309 3.37-5.164 1.715-.754 4.11-.889 5.942-1.095v-.41c0-.753.06-1.642-.383-2.294-.385-.579-1.124-.82-1.776-.82-1.208 0-2.282.62-2.545 1.903-.054.285-.261.567-.548.582l-3.061-.33c-.259-.058-.546-.266-.472-.66C5.97 2.309 8.83 1.5 11.39 1.5c1.307 0 3.015.348 4.045 1.34 1.307 1.22 1.183 2.848 1.183 4.617v4.181c0 1.258.521 1.811 1.012 2.49.172.243.21.534-.01.714l-2.476 2.953h-.001zm3.637 1.664c-2.318 1.762-5.688 2.695-8.586 2.695-4.062 0-7.721-1.501-10.487-3.998-.217-.196-.023-.464.237-.311 2.987 1.738 6.682 2.78 10.497 2.78 2.573 0 5.398-.533 8.001-1.637.393-.167.722.257.338.471zm.962-1.093c-.297-.381-1.963-.181-2.713-.091-.228.028-.263-.171-.058-.315 1.329-.934 3.509-.664 3.762-.351.254.315-.066 2.494-1.315 3.537-.191.16-.375.075-.29-.136.281-.702.91-2.271.614-2.644z"/></svg>Shop on Amazon</a>
+      </div>
+    </div>
+  </div>
+
+</section>
+<div class="back-bar"><a href="index.html" class="back-link">← Back to Home</a></div>
+<div style="position:relative;z-index:2;background:rgba(10,6,2,0.95);border-top:2px solid #5a3f22;padding:1.5rem 2rem;text-align:center">
+  <div style="font-family:'Bebas Neue',cursive;font-size:1.6rem;letter-spacing:.1em;color:#e8c98d;margin-bottom:.3rem">Doc's Garage</div>
+  <div style="font-size:.8rem;color:#b08d62;font-style:italic;margin-bottom:1rem">Built by a Veteran. For Jeepers. Free forever.</div>
+  <div style="display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:1rem">
+    <a href="index.html" style="color:#b08d62;text-decoration:none;font-family:'Oswald',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase">Home</a>
+    <a href="jeep-tj-problems.html" style="color:#b08d62;text-decoration:none;font-family:'Oswald',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase">TJ Guide</a>
+    <a href="jeep-jk-problems.html" style="color:#b08d62;text-decoration:none;font-family:'Oswald',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase">JK Guide</a>
+    <a href="jeep-jl-problems.html" style="color:#b08d62;text-decoration:none;font-family:'Oswald',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase">JL Guide</a>
+    <a href="about.html" style="color:#b08d62;text-decoration:none;font-family:'Oswald',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase">About</a>
+    <a href="contact.html" style="color:#b08d62;text-decoration:none;font-family:'Oswald',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase">Contact</a>
+  </div>
+  <div style="font-size:.72rem;color:#3a2a1a">
+    &copy; 2026 Doc's Garage &nbsp;·&nbsp; For informational purposes only &nbsp;·&nbsp;
+    <strong style="color:#b08d62">Amazon Affiliate Disclosure:</strong> Doc's Garage earns a small commission on qualifying Amazon purchases at no extra cost to you.
+  </div>
+</div>
+</body>
+</html>
