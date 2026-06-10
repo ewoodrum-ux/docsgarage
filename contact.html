@@ -19,7 +19,7 @@
     nav,main,footer,header{position:relative;z-index:2}
     nav{position:sticky;top:0;z-index:100;background:rgba(26,16,8,0.92);backdrop-filter:blur(10px);border-bottom:2px solid var(--coyote);padding:0 2rem;display:flex;align-items:center;height:64px}
     .nav-logo{font-family:'Bebas Neue',cursive;font-size:1.6rem;letter-spacing:.08em;color:var(--tan);text-decoration:none;margin-right:auto;display:flex;align-items:center;gap:.6rem}
-    .nav-logo-icon{width:32px;height:32px;background:var(--coyote);clip-path:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);display:flex;align-items:center;justify-content:center;font-size:.9rem}
+    .nav-logo-icon{width:36px;height:36px;border-radius:50%;object-fit:cover}
     .nav-links{display:flex}
     .nav-links a{text-decoration:none;font-family:'Oswald',sans-serif;font-size:.8rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--khaki);padding:0 1.25rem;height:64px;display:flex;align-items:center;border-bottom:3px solid transparent;transition:color .2s,border-color .2s}
     .nav-links a:hover,.nav-links a.active{color:var(--tan);border-bottom-color:var(--rust-light)}
@@ -113,7 +113,7 @@
 <body>
 
 <nav>
-  <a href="index.html" class="nav-logo"><div class="nav-logo-icon">🔧</div>Doc's Garage</a>
+  <a href="index.html" class="nav-logo"><img src="combatmedicimages.jpeg" alt="Doc's Garage logo" class="nav-logo-icon">Doc's Garage</a>
   <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="jeep-tj-problems.html">TJ Guide</a>
