@@ -244,23 +244,18 @@
   </div>
 </section>
 
-Claude finished the responseIdentified structural limitations and pinpointed footer section for modificationsIdentified structural limitations and pinpointed footer section for modificationsThis is still just a partial diff (nav + footer), not the full page — so I still can't see the homepage's hero/main body classes. But this is actually enough to do two safe things without any guesswork risk:
-1. Add a nav link — find this in the file (search Ctrl+F for nav-links):
-html<div class="nav-links">
+<div class="nav-links">
   <a href="index.html" class="active">Home</a>
   <a href="about.html">About</a>
   <a href="contact.html">Contact</a>
 </div>
-Add a Guides link before About:
-html<div class="nav-links">
+<div class="nav-links">
   <a href="index.html" class="active">Home</a>
   <a href="jeep-tj-problems.html">TJ Guide</a>
   <a href="about.html">About</a>
   <a href="contact.html">Contact</a>
 </div>
-(Your jeep-tj-problems.html nav already has this — your homepage nav is just missing it, which is worth fixing regardless of the new pages.)
-2. Add the same link to the footer — search for footer-links:
-html<div class="footer-links">
+<div class="footer-links">
   <a href="index.html">Home</a>
   <a href="about.html">About</a>
   <a href="contact.html">Contact</a>
@@ -268,17 +263,7 @@ html<div class="footer-links">
   <a href="jeep-jk-problems.html">JK Guide</a>
   <a href="jeep-jl-problems.html">JL Guide</a>
 </div>
-This already links to TJ/JK/JL guides — no change needed here, it's fine as-is.
-For a real "Guides" teaser section on the homepage (a visible block, not just a nav link), I genuinely need to see the hero/main body HTML to match its styling — nav and footer alone don't tell me what classes your homepage's content sections use. Can you scroll to the middle of the file (past the <nav> tag, before <footer>) and paste that chunk? Even just one existing section (like a hero or feature block) would be enough for me to match the pattern.
-For now, the honest truth is: since jeep-tj-problems.html already links to these 7 new guides (once you add that block from before), and the homepage already links to jeep-tj-problems.html, your new pages are technically reachable in 2 clicks from the homepage — Home → TJ Guide → any of the 7 new pages. That's functional discoverability even before we build a dedicated homepage section. Want to prioritize getting that jeep-tj-problems.html block committed first, then circle back to the homepage teaser as a nice-to-have?    /* NAV */
-    nav{position:sticky;top:0;z-index:100;background:rgba(26,16,8,0.95);backdrop-filter:blur(10px);border-bottom:2px solid var(--coyote);padding:0 2rem;display:flex;align-items:center;height:64px}
-    .nav-logo{font-family:'Bebas Neue',cursive;font-size:1.6rem;letter-spacing:.08em;colopastedThe user prompt is empty, so I cannot determine the primary language. However, based on the thinking block alone, here is my summary:
 
-Architected homepage layout integrating buying guides sectionThe user prompt is empty, so I cannot determine the primary language. However, based on the thinking block alone, here is my summary:
-
-Architected homepage layout integrating buying guides sectionNow I can see the real structure — .model-card / .models-grid pattern is exactly what a guides section should reuse. Here's a matching block:
-Insert this right after </section> that closes the JEEP MODEL SELECTOR section (the one with id="jeep-tool"), and before the <!-- CONTACT FORM --> comment:
-html<!-- BUYING GUIDES -->
 <section class="section models-bg" id="guides">
   <div class="section-inner">
     <div class="section-label">TJ Parts &amp; Buying Guides</div>
