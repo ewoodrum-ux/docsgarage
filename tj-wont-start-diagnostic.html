@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jeep TJ Won't Start? Here's What to Check (4.0L Crank-No-Start Guide) | Doc's Garage</title>
+<meta name="description" content="A step-by-step crank-no-start diagnostic path for the Jeep TJ 4.0L, built from real hands-on troubleshooting, with the parts most likely to actually fix it.">
+<style>
+  :root{
+    --coyote: #8a7355;
+    --coyote-dark: #5c4a35;
+    --olive-drab: #5c6b47;
+    --khaki: #c9b896;
+    --khaki-light: #f0e9db;
+    --charcoal: #262521;
+    --charcoal-soft: #33312b;
+    --rust: #a85a3a;
+    --ok-green: #6b8e4e;
+    --warn: #b5842a;
+    --paper: #faf6ee;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background: var(--paper);
+    color: var(--charcoal);
+    line-height:1.6;
+  }
+  .camo-strip{
+    height:10px;
+    background:
+      linear-gradient(115deg, var(--olive-drab) 0 20%, transparent 20% 40%, var(--coyote-dark) 40% 55%, transparent 55% 75%, var(--olive-drab) 75% 100%),
+      var(--coyote);
+  }
+  header.hero{
+    background: linear-gradient(180deg, var(--charcoal) 0%, var(--charcoal-soft) 100%);
+    color: var(--khaki-light);
+    padding: 40px 20px 34px;
+    text-align:center;
+    border-bottom: 6px solid var(--coyote);
+  }
+  .brand{
+    font-family: 'Arial Black', 'Helvetica Neue', sans-serif;
+    letter-spacing: 3px;
+    font-size: 14px;
+    color: var(--khaki);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .brand::before{content:"— "; }
+  .brand::after{content:" —";}
+  h1{
+    font-family: 'Arial Black', 'Helvetica Neue', sans-serif;
+    font-size: clamp(26px, 4vw, 40px);
+    margin: 0 0 12px;
+    line-height:1.15;
+    max-width: 800px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .subhead{
+    color: var(--khaki);
+    font-size: 17px;
+    max-width: 640px;
+    margin: 0 auto;
+    font-style: italic;
+  }
+  .affiliate-note{
+    background: var(--khaki-light);
+    border-bottom: 1px solid #ddd0b5;
+    text-align:center;
+    font-size: 12.5px;
+    color: #7a6f57;
+    padding: 8px 12px;
+    font-family: Arial, sans-serif;
+  }
+  main{
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 40px 20px 60px;
+  }
+  .intro{
+    font-size: 18px;
+    padding: 20px 24px;
+    background: #fff;
+    border-left: 5px solid var(--rust);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    margin-bottom: 36px;
+  }
+  h2{
+    font-family: 'Arial Black', 'Helvetica Neue', sans-serif;
+    font-size: 22px;
+    color: var(--coyote-dark);
+    border-bottom: 3px solid var(--khaki);
+    padding-bottom: 8px;
+    margin-top: 48px;
+  }
+  h3{
+    font-family: 'Arial Black', 'Helvetica Neue', sans-serif;
+    font-size: 17px;
+    color: var(--charcoal);
+    margin-top: 26px;
+  }
+  .triage-banner{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    background: var(--charcoal);
+    color: var(--khaki-light);
+    padding: 16px 22px;
+    border-radius: 8px;
+    margin: 24px 0;
+    font-family: Arial, sans-serif;
+  }
+  .triage-banner .icon{
+    font-size: 26px;
+    flex-shrink:0;
+  }
+  .stage{
+    background:#fff;
+    border: 1px solid #e5dcc5;
+    border-left: 6px solid var(--olive-drab);
+    border-radius: 6px;
+    padding: 20px 24px;
+    margin: 18px 0;
+  }
+  .stage.stage-fuel{border-left-color: var(--warn);}
+  .stage.stage-spark{border-left-color: var(--rust);}
+  .stage.stage-sync{border-left-color: var(--coyote-dark);}
+  .stage-label{
+    font-family: 'Arial Black', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--olive-drab);
+    margin-bottom: 6px;
+  }
+  .stage-fuel .stage-label{color: var(--warn);}
+  .stage-spark .stage-label{color: var(--rust);}
+  .stage-sync .stage-label{color: var(--coyote-dark);}
+  .stage h3{margin-top:0;}
+  .checklist{
+    list-style:none;
+    padding:0;
+    margin: 12px 0 0;
+    font-family: Arial, sans-serif;
+    font-size: 14.5px;
+  }
+  .checklist li{
+    padding: 8px 0 8px 28px;
+    position:relative;
+    border-bottom: 1px solid #f0ead9;
+  }
+  .checklist li:last-child{border-bottom:none;}
+  .checklist li::before{
+    content:"\2713";
+    position:absolute;
+    left:0; top:8px;
+    color: var(--ok-green);
+    font-weight:bold;
+  }
+  .field-note{
+    background: var(--charcoal);
+    color: var(--khaki-light);
+    padding: 22px 26px;
+    border-radius: 8px;
+    margin: 40px 0;
+    font-style: italic;
+    border-left: 5px solid var(--olive-drab);
+  }
+  .field-note .label{
+    display:block;
+    font-family: 'Arial Black', sans-serif;
+    font-style: normal;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--khaki);
+    margin-bottom: 8px;
+  }
+  .product-card{
+    background:#fff;
+    border: 1px solid #e5dcc5;
+    border-radius: 8px;
+    padding: 22px 24px;
+    margin: 18px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  .product-title{
+    font-family: 'Arial Black', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    color: var(--charcoal);
+    margin: 0 0 4px;
+  }
+  .product-meta{
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #7a7263;
+    margin-bottom: 10px;
+  }
+  .cta-btn{
+    display:inline-block;
+    background: var(--rust);
+    color:#fff;
+    font-family: Arial, sans-serif;
+    font-weight:bold;
+    text-decoration:none;
+    padding: 11px 22px;
+    border-radius: 5px;
+    margin-top: 6px;
+    letter-spacing: 0.5px;
+  }
+  .cta-btn:hover{background:#8f4a2e;}
+  .disclosure-box{
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #7a7263;
+    background: var(--khaki-light);
+    padding: 14px 18px;
+    border-radius: 6px;
+    margin-top: 40px;
+  }
+  footer{
+    background: var(--charcoal);
+    color: var(--khaki);
+    text-align:center;
+    padding: 28px 20px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+  }
+  footer a{color:var(--khaki-light);}
+</style>
+</head>
+<body>
+
+<div class="camo-strip"></div>
+<header class="hero">
+  <div class="brand">Doc's Garage</div>
+  <h1>Jeep TJ Won't Start? Here's the Order to Check Things</h1>
+  <p class="subhead">A field-tested crank-no-start triage path for the 4.0L, built from actually chasing one down harness to sensor.</p>
+</header>
+<div class="affiliate-note">As an Amazon Associate, Doc's Garage earns from qualifying purchases. It costs you nothing extra.</div>
+
+<main>
+
+  <div class="intro">
+    Crank-no-start on a 4.0L TJ is almost never one thing &mdash; it's usually a chain of small failures that all have to be ruled out in order. Working it randomly wastes time and parts money. Below is the same triage sequence I used on my own '97, moving from the fastest checks to the deepest ones.
+  </div>
+
+  <div class="triage-banner">
+    <span class="icon">&#9877;</span>
+    <span>Triage rule: fix the fastest, cheapest thing to rule out first. Don't replace a $200 part to test a $10 theory.</span>
+  </div>
+
+  <h2>Stage 1: Fuel Delivery</h2>
+  <div class="stage stage-fuel">
+    <div class="stage-label">Check First</div>
+    <h3>Is fuel actually reaching the rail?</h3>
+    <ul class="checklist">
+      <li>Listen for the fuel pump prime (2-second hum) when you turn the key to ON</li>
+      <li>Check fuel pump relay and fuse before assuming the pump itself is dead</li>
+      <li>Verify fuel pressure at the rail with a gauge (TJ 4.0L should hold spec pressure with key on, engine off)</li>
+      <li>Inspect the fuel filter/pump strainer if the Jeep has sat unused for a long stretch</li>
+    </ul>
+  </div>
+
+  <h2>Stage 2: Spark</h2>
+  <div class="stage stage-spark">
+    <div class="stage-label">Check Second</div>
+    <h3>Is the coil actually firing?</h3>
+    <ul class="checklist">
+      <li>Pull a plug, ground it against the block, and crank &mdash; look for a strong blue spark</li>
+      <li>Check the crank position sensor connector for corrosion or a loose pin (common failure point)</li>
+      <li>Inspect the coil pack and plug wires for cracking, especially if the engine bay runs hot</li>
+      <li>Verify the ASD (Automatic Shutdown) relay is actually energizing &mdash; no ASD signal means no spark <em>and</em> no injector pulse, even with good fuel pressure</li>
+    </ul>
+  </div>
+
+  <h2>Stage 3: Cam/Crank Sync</h2>
+  <div class="stage stage-sync">
+    <div class="stage-label">Check Third — Often the Real Culprit</div>
+    <h3>Does the PCM see a valid sync signal?</h3>
+    <p>If fuel and spark both check out individually but the engine still won't fire, the PCM likely isn't getting a clean, correctly-timed signal from both the cam and crank sensors at the same time. This is the stage that gets skipped most often because each sensor can test "fine" in isolation while the sync between them is still off.</p>
+    <ul class="checklist">
+      <li>Confirm both cam and crank sensor connectors are fully seated and pins aren't backed out</li>
+      <li>Check for correct air gap and sensor orientation if either was recently replaced</li>
+      <li>Look for a scan tool code specific to cam/crank correlation, not just a generic sensor fault</li>
+      <li>Rule out a compromised harness section between the sensors and PCM &mdash; chafed wire or a bad splice can pass a static test but fail under cranking vibration</li>
+    </ul>
+  </div>
+
+  <div class="field-note">
+    <span class="label">From the bench</span>
+    I rebuilt my harness and replaced every major sensor on this exact hunt, and the sync signal between cam and crank was still the last thing standing. If you've already thrown parts at fuel and spark with no luck, stop guessing and go straight to verifying cam/crank sync and ASD relay behavior with a scope or scan tool before buying anything else.
+  </div>
+
+  <h2>Parts Worth Having On Hand</h2>
+
+  <div class="product-card">
+    <div class="product-title">Crank Position Sensor (4.0L TJ)</div>
+    <div class="product-meta">Common failure point &middot; Cheap to rule out early</div>
+    <p>Corrosion at this connector is one of the most common causes of an intermittent or total no-start on the 4.0L. Worth checking and replacing early since it's inexpensive relative to the diagnostic time it saves.</p>
+    <a class="cta-btn" href="#" data-amazon-asin="REPLACE_WITH_ASIN">Check Price on Amazon &rarr;</a>
+  </div>
+
+  <div class="product-card">
+    <div class="product-title">ASD Relay</div>
+    <div class="product-meta">Controls fuel pump, injectors, and ignition coil power</div>
+    <p>A weak or failing ASD relay can mimic a fuel <em>or</em> spark problem, because it powers both circuits. If you're chasing your tail between fuel and spark theories, test this relay directly before going further.</p>
+    <a class="cta-btn" href="#" data-amazon-asin="REPLACE_WITH_ASIN">Check Price on Amazon &rarr;</a>
+  </div>
+
+  <div class="product-card">
+    <div class="product-title">OBD-II Scan Tool with Live Data</div>
+    <div class="product-meta">Needed to actually see cam/crank correlation, not just codes</div>
+    <p>A basic code reader isn't enough for Stage 3 &mdash; you need live data to watch cam and crank signals in real time while cranking. This is the tool that finally isolates a sync problem instead of guessing at it.</p>
+    <a class="cta-btn" href="#" data-amazon-asin="REPLACE_WITH_ASIN">Check Price on Amazon &rarr;</a>
+  </div>
+
+  <h2>Related Guides</h2>
+  <p>Already ruled out fuel and spark and landed on an electrical gremlin? See the <a href="#">TJ Problem Guide</a> for other 4.0L wiring failure points, or check <a href="#">Best Blower Motor Resistors for TJ</a> if your electrical issues started with the HVAC system.</p>
+
+  <div class="disclosure-box">
+    <strong>Affiliate Disclosure:</strong> Doc's Garage is a participant in the Amazon Services LLC Associates Program. Links on this page may earn a small commission at no extra cost to you. I only recommend parts I'd put on my own Jeep.
+  </div>
+
+</main>
+
+<footer>
+  <div class="camo-strip"></div>
+  <p style="margin-top:16px;">Doc's Garage &middot; Built by a Combat Medic Veteran who wrenches on his own TJ &middot; <a href="#">docsgarage.net</a></p>
+</footer>
+
+</body>
+</html>

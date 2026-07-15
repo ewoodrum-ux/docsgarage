@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best Blower Motor Resistors for Jeep TJ (1997-2006) | Doc's Garage</title>
+<meta name="description" content="Field-tested blower motor resistor picks for the Jeep Wrangler TJ, plus the real diagnostic steps to confirm it's your problem before you buy.">
+<style>
+  :root{
+    --coyote: #8a7355;
+    --coyote-dark: #5c4a35;
+    --olive-drab: #5c6b47;
+    --khaki: #c9b896;
+    --khaki-light: #f0e9db;
+    --charcoal: #262521;
+    --charcoal-soft: #33312b;
+    --rust: #a85a3a;
+    --ok-green: #6b8e4e;
+    --paper: #faf6ee;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background: var(--paper);
+    color: var(--charcoal);
+    line-height:1.6;
+  }
+  .camo-strip{
+    height:10px;
+    background:
+      linear-gradient(115deg, var(--olive-drab) 0 20%, transparent 20% 40%, var(--coyote-dark) 40% 55%, transparent 55% 75%, var(--olive-drab) 75% 100%),
+      var(--coyote);
+  }
+  header.hero{
+    background: linear-gradient(180deg, var(--charcoal) 0%, var(--charcoal-soft) 100%);
+    color: var(--khaki-light);
+    padding: 40px 20px 34px;
+    text-align:center;
+    border-bottom: 6px solid var(--coyote);
+  }
+  .brand{
+    font-family: 'Arial Black', 'Helvetica Neue', sans-serif;
+    letter-spacing: 3px;
+    font-size: 14px;
+    color: var(--khaki);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .brand::before{content:"— "; }
+  .brand::after{content:" —";}
+  h1{
+    font-family: 'Arial Black', 'Helvetica Neue', sans-serif;
+    font-size: clamp(26px, 4vw, 42px);
+    margin: 0 0 12px;
+    line-height:1.15;
+    max-width: 780px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .subhead{
+    color: var(--khaki);
+    font-size: 17px;
+    max-width: 620px;
+    margin: 0 auto;
+    font-style: italic;
+  }
+  .affiliate-note{
+    background: var(--khaki-light);
+    border-bottom: 1px solid #ddd0b5;
+    text-align:center;
+    font-size: 12.5px;
+    color: #7a6f57;
+    padding: 8px 12px;
+    font-family: Arial, sans-serif;
+  }
+  main{
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 40px 20px 60px;
+  }
+  .intro{
+    font-size: 18px;
+    padding: 20px 24px;
+    background: #fff;
+    border-left: 5px solid var(--rust);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    margin-bottom: 36px;
+  }
+  h2{
+    font-family: 'Arial Black', 'Helvetica Neue', sans-serif;
+    font-size: 22px;
+    color: var(--coyote-dark);
+    border-bottom: 3px solid var(--khaki);
+    padding-bottom: 8px;
+    margin-top: 48px;
+  }
+  .symptom-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 14px;
+    margin: 20px 0 8px;
+  }
+  .symptom-card{
+    background:#fff;
+    border: 1px solid #e5dcc5;
+    border-radius: 6px;
+    padding: 16px 18px;
+    font-size: 15px;
+  }
+  .symptom-card .tag{
+    display:inline-block;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: var(--olive-drab);
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+  }
+  .product-card{
+    background:#fff;
+    border: 1px solid #e5dcc5;
+    border-radius: 8px;
+    padding: 22px 24px;
+    margin: 22px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    position: relative;
+  }
+  .product-card.top-pick{
+    border: 2px solid var(--rust);
+  }
+  .pick-ribbon{
+    position:absolute;
+    top:-12px;
+    left:20px;
+    background: var(--rust);
+    color:#fff;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 4px;
+  }
+  .product-title{
+    font-family: 'Arial Black', 'Helvetica Neue', sans-serif;
+    font-size: 19px;
+    color: var(--charcoal);
+    margin: 6px 0 4px;
+  }
+  .product-meta{
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #7a7263;
+    margin-bottom: 10px;
+  }
+  .pros-cons{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 14px 0;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+  }
+  .pros-cons div{padding:10px 12px; border-radius:6px;}
+  .pros{background:#eef3e6;}
+  .cons{background:#f6ece6;}
+  .pros p, .cons p{margin:0 0 6px; font-weight:bold; font-family:'Arial Black',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.5px;}
+  .cta-btn{
+    display:inline-block;
+    background: var(--rust);
+    color:#fff;
+    font-family: Arial, sans-serif;
+    font-weight:bold;
+    text-decoration:none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    margin-top: 8px;
+    letter-spacing: 0.5px;
+    transition: background 0.15s;
+  }
+  .cta-btn:hover{background:#8f4a2e;}
+  .diag-steps{
+    counter-reset: step;
+    list-style:none;
+    padding:0;
+  }
+  .diag-steps li{
+    counter-increment: step;
+    position: relative;
+    padding: 12px 12px 12px 52px;
+    margin-bottom: 10px;
+    background:#fff;
+    border: 1px solid #e5dcc5;
+    border-radius: 6px;
+  }
+  .diag-steps li::before{
+    content: counter(step);
+    position:absolute;
+    left:12px; top:50%;
+    transform: translateY(-50%);
+    width:28px; height:28px;
+    background: var(--coyote-dark);
+    color:#fff;
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Arial Black',sans-serif;
+    font-size:14px;
+  }
+  .field-note{
+    background: var(--charcoal);
+    color: var(--khaki-light);
+    padding: 22px 26px;
+    border-radius: 8px;
+    margin: 40px 0;
+    font-style: italic;
+    border-left: 5px solid var(--olive-drab);
+  }
+  .field-note .label{
+    display:block;
+    font-family: 'Arial Black', sans-serif;
+    font-style: normal;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--khaki);
+    margin-bottom: 8px;
+  }
+  table.compat{
+    width:100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    margin: 16px 0;
+  }
+  table.compat th, table.compat td{
+    border: 1px solid #e0d6bd;
+    padding: 8px 10px;
+    text-align:left;
+  }
+  table.compat th{
+    background: var(--khaki-light);
+  }
+  footer{
+    background: var(--charcoal);
+    color: var(--khaki);
+    text-align:center;
+    padding: 28px 20px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+  }
+  footer a{color:var(--khaki-light);}
+  .disclosure-box{
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #7a7263;
+    background: var(--khaki-light);
+    padding: 14px 18px;
+    border-radius: 6px;
+    margin-top: 40px;
+  }
+</style>
+</head>
+<body>
+
+<div class="camo-strip"></div>
+<header class="hero">
+  <div class="brand">Doc's Garage</div>
+  <h1>Best Blower Motor Resistors for Jeep TJ (1997&ndash;2006)</h1>
+  <p class="subhead">Field-tested picks, plus how to confirm it's actually the resistor before you spend a dime.</p>
+</header>
+<div class="affiliate-note">As an Amazon Associate, Doc's Garage earns from qualifying purchases. It costs you nothing extra.</div>
+
+<main>
+
+  <div class="intro">
+    If your TJ's blower is stuck on high, silent no matter the setting, or only works on one speed, the resistor is the first suspect &mdash; but it's not always the root cause. I chased this exact problem on my own '97 4.0L, and a burned resistor turned out to be a symptom, not the disease. Below are the parts I'd actually buy, plus the checks I ran before I bought them.
+  </div>
+
+  <h2>Signs Your Resistor Is Bad</h2>
+  <div class="symptom-grid">
+    <div class="symptom-card">
+      <span class="tag">Most Common</span>
+      Blower only runs on <strong>high speed</strong>, regardless of dial position &mdash; classic burned-out resistor coil.
+    </div>
+    <div class="symptom-card">
+      <span class="tag">Electrical</span>
+      A <strong>burning smell</strong> near the HVAC housing under the dash, or visible scorch marks on the connector.
+    </div>
+    <div class="symptom-card">
+      <span class="tag">Wiring</span>
+      Blower cuts out intermittently &mdash; often a <strong>melted pigtail connector</strong> rather than the resistor itself.
+    </div>
+    <div class="symptom-card">
+      <span class="tag">Root Cause Check</span>
+      Resistor melts again after replacement &mdash; almost always means the <strong>blower motor</strong> is drawing too much current and cooking the new part.
+    </div>
+  </div>
+
+  <div class="field-note">
+    <span class="label">From the bench</span>
+    Melted resistors are frequently a symptom of a failing blower motor, not a standalone failure. If you replace the resistor and it melts again within a few weeks, stop buying resistors and test the motor's amp draw. A tired motor pulls more current than the resistor coil is rated for, and it'll keep cooking new ones.
+  </div>
+
+  <h2>Quick Diagnosis Before You Buy</h2>
+  <ol class="diag-steps">
+    <li>Pull the blower motor fuse/relay and inspect for signs of overheating in the fuse box.</li>
+    <li>Locate the resistor (passenger side of the HVAC housing, under the dash) and check for melted plastic or a burnt smell.</li>
+    <li>Unplug the pigtail connector &mdash; if the terminals are discolored, warped, or loose, replace the pigtail along with the resistor.</li>
+    <li>With the resistor unplugged, test blower speeds. If it only ever runs on high, the resistor circuit is confirmed as the fault.</li>
+    <li>If a new resistor fails again quickly, test blower motor current draw with a multimeter before buying a third one.</li>
+  </ol>
+
+  <h2>Top Picks</h2>
+
+  <div class="product-card top-pick">
+    <div class="pick-ribbon">Doc's Top Pick</div>
+    <div class="product-title">Crown Automotive Blower Motor Resistor (5019941AA)</div>
+    <div class="product-meta">OEM-spec fitment &middot; Fits 1997&ndash;2006 Jeep Wrangler TJ &middot; Direct replacement, no splicing</div>
+    <p>This is the part I put in my own TJ. Crown Automotive builds to OEM tolerances, and for a part that's this cheap and this failure-prone, I'd rather have the exact factory spec than an off-brand clone with a thinner coil winding.</p>
+    <div class="pros-cons">
+      <div class="pros">
+        <p>Pros</p>
+        Direct OEM fit, reliable coil rating, easy 15-minute install
+      </div>
+      <div class="cons">
+        <p>Cons</p>
+        Won't fix a root-cause blower motor issue on its own
+      </div>
+    </div>
+    <a class="cta-btn" href="#" data-amazon-asin="REPLACE_WITH_ASIN">Check Price on Amazon &rarr;</a>
+  </div>
+
+  <div class="product-card">
+    <div class="product-title">APDTY Blower Motor Resistor &amp; Pigtail Combo (084416)</div>
+    <div class="product-meta">Includes wiring pigtail &middot; Good pairing if your connector is also melted</div>
+    <p>If step 3 above showed a scorched connector, don't just replace the resistor &mdash; replace the pigtail with it. This combo kit saves you from tracking down the connector separately, and a fresh pigtail means you're not reconnecting a new resistor to already-damaged wiring.</p>
+    <div class="pros-cons">
+      <div class="pros">
+        <p>Pros</p>
+        Solves resistor + connector in one order, decent price
+      </div>
+      <div class="cons">
+        <p>Cons</p>
+        Requires basic wire splicing/crimping skills
+      </div>
+    </div>
+    <a class="cta-btn" href="#" data-amazon-asin="REPLACE_WITH_ASIN">Check Price on Amazon &rarr;</a>
+  </div>
+
+  <div class="product-card">
+    <div class="product-title">Standard Motor Products Blower Motor Resistor</div>
+    <div class="product-meta">Aftermarket, budget-friendly &middot; Common alternative brand</div>
+    <p>A solid budget option if you've already confirmed your blower motor is healthy and just need a straightforward swap. Not my first pick, but a reasonable backup if the Crown part is out of stock.</p>
+    <div class="pros-cons">
+      <div class="pros">
+        <p>Pros</p>
+        Lower price point, widely available
+      </div>
+      <div class="cons">
+        <p>Cons</p>
+        Coil quality varies more between batches than OEM-spec parts
+      </div>
+    </div>
+    <a class="cta-btn" href="#" data-amazon-asin="REPLACE_WITH_ASIN">Check Price on Amazon &rarr;</a>
+  </div>
+
+  <h2>Fitment</h2>
+  <table class="compat">
+    <tr><th>Year Range</th><th>Model</th><th>Engine</th><th>Notes</th></tr>
+    <tr><td>1997&ndash;2006</td><td>Wrangler TJ</td><td>2.5L / 4.0L</td><td>Resistor location and part number shared across both engines</td></tr>
+    <tr><td>1997&ndash;2001</td><td>Cherokee XJ</td><td>2.5L / 4.0L</td><td>Same resistor design, verify connector shape before ordering</td></tr>
+  </table>
+
+  <h2>Related Guides</h2>
+  <p>If your blower issue turned out to be more than the resistor, check the full <a href="#">TJ Crank-No-Start Diagnostic Guide</a> for the broader electrical troubleshooting process, or browse the <a href="#">TJ Problem Guide</a> for other common 4.0L gremlins.</p>
+
+  <div class="disclosure-box">
+    <strong>Affiliate Disclosure:</strong> Doc's Garage is a participant in the Amazon Services LLC Associates Program. Links on this page may earn a small commission at no extra cost to you. I only recommend parts I'd put on my own Jeep.
+  </div>
+
+</main>
+
+<footer>
+  <div class="camo-strip"></div>
+  <p style="margin-top:16px;">Doc's Garage &middot; Built by a Combat Medic Veteran who wrenches on his own TJ &middot; <a href="#">docsgarage.net</a></p>
+</footer>
+
+</body>
+</html>
